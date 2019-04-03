@@ -29,22 +29,27 @@ class YogaPose extends Component {
           </Link>
         </header>
 
-        <section className="card">
-          {/* front of card */}
-          <section className="single-pose-image">
-            <section className="card__face card__face--front">
+        <section className="scene scene--card">
+          <section
+            className="card"
+            style={{ isFlipped: this.state.isFlipped }}
+            onClick={() => this.setState({ isFlipped: !this.state.isFlipped })}
+          >
+            {/* front of card */}
+            <section className="single-pose-image card__face card__face--front">
+              {/* <section className="card__face card__face--front"> */}
               <img
                 src={require('../images/yoga_stock_img.jpg')}
                 className="pose-detail-img"
                 alt="tree-pose-image"
-                onClick={this.rotatePoseCard}
+                // onClick={this.rotatePoseCard}
               />
+              {/* </section> */}
             </section>
-          </section>
 
-          {/* back of card */}
-          <section className="detail-card-outline">
-            <section className="card__face card__face--back">
+            {/* back of card */}
+            <section className="detail-card-outline card__face card__face--back">
+              {/* <section className="card__face card__face--back"> */}
               <ol className="pose-details-list list-group">
                 <li className="list-group-item">Sanskrit Name</li>
                 <li className="list-group-item">English Name</li>

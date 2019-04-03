@@ -284,3 +284,22 @@ header h1 {
 .pose-details-list li {
   width: 80% !important;
 }
+
+/* yoga pose card rotation animation */
+
+.single-pose-container .card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.scene {
+  perspective: 600px;
+}
+
+.single-pose-container .card .isFlipped {
+  transform: rotateY(180deg);
+}
