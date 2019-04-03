@@ -5,7 +5,7 @@ class YogaPoses extends Component {
   render() {
     return (
       <section className="main-poses-container">
-        <header className="header-nav">
+        <header className="header-nav directory-header-nav">
           <Link to="/">
             <h1>The Yogi Me</h1>
           </Link>

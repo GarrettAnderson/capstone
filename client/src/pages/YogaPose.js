@@ -10,7 +10,7 @@ class YogaPose extends Component {
             <h1>The Yogi Me</h1>
           </Link>
         </header>
-        <main className="single-pose-details detail-card-outline">
+        <main className="detail-card-outline">
           <section>
             <ol className="pose-details-list list-group">
               <li className="list-group-item">Sanskrit Name</li>
@@ -19,7 +19,9 @@ class YogaPose extends Component {
               {/* </ol>
 
             <ol className="pose-details-list list-group"> */}
-              <header>Steps to Get into the Pose</header>
+              <li className="list-group-item">
+                <h6>Steps to Get into the Pose</h6>
+              </li>
               <li className="list-group-item">Step 1</li>
               <li className="list-group-item"> Step 2</li>
               <li className="list-group-item">Step 3</li>
