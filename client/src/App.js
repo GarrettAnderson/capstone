@@ -20,8 +20,9 @@ class App extends Component {
             <Route exact path="/:YogaHistory" component={YogaHistory} />
             <Route exact path="/:YogaPoses" component={YogaPoses} /> */}
             <Route exact path="/:YogaPose" component={YogaPoses} />
-            {/* <Route exact path="/:YogaPose/1" component={YogaPoseImg} /> */}
-            <Route exact path="/:YogaPose/1" component={YogaPose} />
+            <Route exact path="/:YogaPose/1" component={YogaPoseImg} />
+            {/* <Route exact path="/:YogaPose" component={YogaPoseImg} /> */}
+            {/* <Route exact path="/:YogaPose/1" component={YogaPose} /> */}
 
             {/* <Route exact path="/:YogaSequences" component={YogaSequences} /> */}
           </Switch>
