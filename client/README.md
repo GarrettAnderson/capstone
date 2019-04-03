@@ -1,0 +1,3 @@
+# The Yogi Me
+
+The Yogi Me is a place for yoga instructors to curate and create a yoga class from a directory of yoga poses. The purpose of this app is to help those interested in creating a yoga flow for themselves or to others by providing a drag and drop display of a yoga sequence, beginning to end. Additionally, it is possible to learn about various different yoga poses with each 'yoga card' will show an image, Sanskrit/ English name, steps to get into the pose, position type and description.

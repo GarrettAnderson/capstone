@@ -1,0 +1,271 @@
+:root {
+  font: 16px / 1 sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Yoga Poses Directory */
+.pose-gallery-img {
+  width: 18em;
+}
+
+.pose-detail-img {
+  width: 15em;
+}
+
+.pose-index-gallery {
+  width: 15em;
+}
+
+.pose-directory-row figcaption {
+  position: relative;
+  bottom: 2rem;
+  left: 1rem;
+  color: hsl(150, 9%, 96%);
+  font-family: 'Roboto', sans-serif;
+}
+
+.create-yoga-container {
+  display: flex;
+  margin: 0em;
+  border: 3px solid black;
+  height: 100vh;
+  background: url('images/lotus.jpg');
+  background-position-x: 0%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+}
+
+.yoga-pose-index {
+  border: 8px solid bisque;
+  margin: 1em;
+  width: 100%;
+  background-color: hsl(176, 13%, 46%, 0.5);
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+.yoga-pose-index ol {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: space-evenly;
+}
+
+.yoga-pose-index li {
+  margin-bottom: 1em;
+}
+
+.yoga-pose-index h2 {
+  margin-left: 0.75em;
+}
+
+.yoga-sequence {
+  border: 8px solid bisque;
+  margin: 1em;
+  width: 70%;
+  background-color: hsl(176, 13%, 46%, 0.5);
+  border-radius: 10px;
+  display: none;
+}
+
+/* header {
+  background: url('images/header_background.jpg');
+  height: 15%;
+  background-size: cover;
+} */
+
+.header-nav {
+  background: url('images/header_background.jpg');
+  height: 15%;
+  background-size: cover;
+}
+
+.header-nav a {
+  text-decoration: none;
+}
+
+header h1 {
+  font-size: 4em;
+  font-family: 'Oleo Script', cursive;
+  /* font-family: 'Julius Sans One', sans-serif; */
+  margin-top: 0;
+  color: bisque;
+  padding-top: 0.2em;
+  padding-left: 0.2em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Home Page and header specific styles */
+.landing-pg-container {
+  height: 100vh;
+}
+
+.homepage-header {
+  background: url('images/texture_background.jpg');
+  background-repeat: no-repeat;
+  background-position-y: -38em;
+  height: 15%;
+}
+
+.homepage-header a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Home Page Styles */
+
+.home-page-container {
+  /* background: url('images/buddha_splash.jpg'); */
+  width: 100%;
+  height: 75%;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  /* padding-top: 2rem; */
+}
+
+.home-page-container section {
+  padding-top: 3rem;
+}
+
+.home-page-container ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+
+.home-page-container h3 {
+  margin-top: 0;
+}
+
+.home-page-container a {
+  color: #000;
+  list-style: none;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+
+.home-page-container .list-group-item {
+  background-color: hsl(180, 21%, 64%, 0.3) !important;
+  border: 3px solid hsl(211, 41%, 50%);
+}
+
+.home-page-container a:hover {
+  text-decoration: none;
+}
+
+/* Yoga Pose Directory Styles */
+.main-poses-container {
+  height: 87vh;
+}
+
+.pose-directory-container {
+  /* display: flex;
+  flex-direction: column; */
+  width: 100%;
+  background: url('images/buddha_background.jpg');
+  /* background-position-x: 50%;
+  background-position-y: 50%; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pose-directory-container ol {
+  list-style: none;
+  overflow: auto;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.pose-directory-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.pose-directory-container li {
+  margin-top: 2rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pose-directory-container li img {
+  border: 1px solid hsl(21, 19%, 71%);
+}
+
+/* .pose-directory-container li p {
+
+} */
+
+/* Individual Yoga Pose */
+.single-pose-container {
+  height: 100vh;
+}
+
+.single-pose-details {
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-card-outline {
+  background-color: hsl(21, 19%, 71%, 0.5);
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  width: 90%;
+  border: 3px solid hsl(21, 19%, 71%);
+  border-radius: 5px;
+}
+
+.single-pose-details > section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+  width: 90%;
+  height: 90%;
+  border: 3px solid hsl(21, 19%, 71%);
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.single-pose-image img {
+  width: 80%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.single-pose-details ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0;
+}
+
+.pose-details-list {
+  width: 100%;
+}
+
+.pose-details-list li {
+  width: 80% !important;
+}
