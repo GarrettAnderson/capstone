@@ -234,11 +234,11 @@ header h1 {
 
 .detail-card-outline {
   background-color: hsl(21, 19%, 71%, 0.5);
-  margin: 2rem;
+  width: 36rem;
+  height: 48rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
   border: 3px solid hsl(21, 19%, 71%);
   border-radius: 5px;
 }
@@ -287,11 +287,12 @@ header h1 {
 
 /* yoga pose card rotation animation */
 
-.single-pose-container .card {
+/* .single-pose-container .card {
   width: 36rem;
   height: 48rem;
-  transition: transform 1s;
+  transition: transform 1s linear;
   transform-style: preserve-3d;
+  transform-origin: center right;
   cursor: pointer;
   position: relative;
 }
@@ -316,18 +317,57 @@ header h1 {
   transform: rotateY(180deg);
 }
 
-.card.isFlipped {
-  transform: rotateY(180deg);
+.single-pose-container .card .isFlipped {
+  transform: translateX(-100%) rotateY(-180deg);
 }
 
-.card__face--front {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
 
 .card img {
   width: 36rem;
   height: 48rem;
   border-radius: 5px;
+}
+*/
+
+.scene {
+  width: 200px;
+  height: 260px;
+  border: 1px solid #ccc;
+  margin: 40px 0;
+  perspective: 600px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: red;
+}
+
+.card__face--back {
+  background: blue;
+  transform: rotateY(180deg);
 }
