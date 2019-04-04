@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 class YogaPose extends Component {
   state = {
-    isFlipped: true
+    isFlipped: !true
   }
 
   render() {
@@ -23,7 +23,7 @@ class YogaPose extends Component {
             <div className="card__face card__face--front">
               <img
                 src={require('../images/yoga_stock_img.jpg')}
-                // className="card__face card__face--front"
+                className="card__face card__face--front"
                 alt="tree-pose-image"
               />
             </div>

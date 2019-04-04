@@ -17,10 +17,10 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             {/* <Route exact path="/:YogaSequenceBuilder" component={YogaSequenceBuilder} />
-            <Route exact path="/:YogaHistory" component={YogaHistory} />
-            <Route exact path="/:YogaPoses" component={YogaPoses} /> */}
-            <Route exact path="/:YogaPose" component={YogaPose} />
-            {/* <Route exact path="/:YogaPose/1" component={YogaPoseImg} /> */}
+            <Route exact path="/:YogaHistory" component={YogaHistory} />*/}
+            <Route exact path="/:Poses" component={YogaPoses} />
+            {/* <Route exact path="/:YogaPose" component={YogaPose} /> */}
+            <Route exact path="/:Pose/1" component={YogaPose} />
             {/* <Route exact path="/:YogaPose" component={YogaPoseImg} /> */}
             {/* <Route exact path="/:YogaPose/1" component={YogaPose} /> */}
 
