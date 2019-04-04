@@ -127,8 +127,10 @@ header h1 {
 .homepage-header {
   background: url('images/texture_background.jpg');
   background-repeat: no-repeat;
-  background-position-y: -34em;
+  background-position-y: -42em;
   background-size: cover;
+  height: 15%;
+  min-height: 7rem;
   height: 15%;
 }
 
