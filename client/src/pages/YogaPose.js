@@ -30,47 +30,47 @@ class YogaPose extends Component {
         </header>
 
         <section className="scene scene--card">
+          {/* front of card */}
+          <section className="single-pose-image card">
+            {/* <section className="card__face card__face--front"> */}
+            <img
+              src={require('../images/yoga_stock_img.jpg')}
+              className="card__face card__face--front"
+              alt="tree-pose-image"
+              style={{ isFlipped: this.state.isFlipped }}
+              onClick={() => this.setState({ isFlipped: !this.state.isFlipped })}
+              // onClick={this.rotatePoseCard}
+              //pose-detail-img
+            />
+          </section>
+
+          {/* back of card */}
           <section
-            className="card"
+            className="detail-card-outline card__face card__face--back"
             style={{ isFlipped: this.state.isFlipped }}
             onClick={() => this.setState({ isFlipped: !this.state.isFlipped })}
           >
-            {/* front of card */}
-            <section className="single-pose-image card__face card__face--front">
-              {/* <section className="card__face card__face--front"> */}
-              <img
-                src={require('../images/yoga_stock_img.jpg')}
-                className="pose-detail-img"
-                alt="tree-pose-image"
-                // onClick={this.rotatePoseCard}
-              />
-              {/* </section> */}
-            </section>
-
-            {/* back of card */}
-            <section className="detail-card-outline card__face card__face--back">
-              {/* <section className="card__face card__face--back"> */}
-              <ol className="pose-details-list list-group">
-                <li className="list-group-item">Sanskrit Name</li>
-                <li className="list-group-item">English Name</li>
-                <li className="list-group-item">Position Type</li>
-                {/* </ol>
+            {/* <section className="card__face card__face--back"> */}
+            <ol className="pose-details-list list-group">
+              <li className="list-group-item">Sanskrit Name</li>
+              <li className="list-group-item">English Name</li>
+              <li className="list-group-item">Position Type</li>
+              {/* </ol>
 
             <ol className="pose-details-list list-group"> */}
-                <li className="list-group-item">
-                  <h6>Steps to Get into the Pose</h6>
-                </li>
-                <li className="list-group-item">Step 1</li>
-                <li className="list-group-item"> Step 2</li>
-                <li className="list-group-item">Step 3</li>
-                <li className="list-group-item">Step 4</li>
-                <li className="list-group-item">Step 5</li>
-                <li className="list-group-item">
-                  <b>Description:</b> Handstand half moon pose half boat pose eight angle pose child's pose frog pose
-                  bird of paradise pose crab pose staff pose flying crow pose.
-                </li>
-              </ol>
-            </section>
+              <li className="list-group-item">
+                <h6>Steps to Get into the Pose</h6>
+              </li>
+              <li className="list-group-item">Step 1</li>
+              <li className="list-group-item"> Step 2</li>
+              <li className="list-group-item">Step 3</li>
+              <li className="list-group-item">Step 4</li>
+              <li className="list-group-item">Step 5</li>
+              <li className="list-group-item">
+                <b>Description:</b> Handstand half moon pose half boat pose eight angle pose child's pose frog pose bird
+                of paradise pose crab pose staff pose flying crow pose.
+              </li>
+            </ol>
           </section>
         </section>
       </section>
