@@ -330,8 +330,8 @@ header h1 {
 
 .card__face {
   position: absolute;
-  backface-visibility: hidden;
   overflow: scroll;
+  backface-visibility: hidden;
 }
 
 .card__face--back {

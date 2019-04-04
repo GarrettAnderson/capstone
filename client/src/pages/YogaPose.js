@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 class YogaPose extends Component {
   state = {
-    isFlipped: !true
+    isFlipped: false
   }
 
   render() {
@@ -21,11 +21,7 @@ class YogaPose extends Component {
             onClick={() => this.setState({ isFlipped: !this.state.isFlipped })}
           >
             <div className="card__face card__face--front">
-              <img
-                src={require('../images/yoga_stock_img.jpg')}
-                className="card__face card__face--front"
-                alt="tree-pose-image"
-              />
+              <img src={require('../images/yoga_stock_img.jpg')} alt="tree-pose-image" />
             </div>
             <div className="detail-card-outline card__face card__face--back">
               <ol className="pose-details-list list-group">
