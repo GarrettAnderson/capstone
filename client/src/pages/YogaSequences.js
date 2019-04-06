@@ -31,7 +31,16 @@ class YogaSequences extends Component {
         <main>
           <ol className="list-group courses-list">
             {this.state.courses.map((course) => {
-              return <CourseListItem key={course.id} id={course.id} name={course.name} load={this.loadCourses} />
+              return (
+                <CourseListItem
+                  key={course.id}
+                  id={course.id}
+                  name={course.name}
+                  load={this.loadCourses}
+                  purpose={course.purpose}
+                  desc={course.description}
+                />
+              )
             })}
           </ol>
         </main>

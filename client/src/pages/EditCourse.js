@@ -4,6 +4,18 @@ import Form from 'react-jsonschema-form'
 import axios from 'axios'
 
 class EditCourse extends Component {
+  state = {
+    courses: [],
+    poses: []
+  }
+
+  componentDidMount() {
+    axios.get(`http://localhost:3000/api/courses/${this.props.match.params.id}`).then((response) => {
+      console.log(response)
+      this.setState({ courses: response.data })
+    })
+  }
+
   render() {
     const formSchema = {
       title: 'Course',
@@ -13,18 +25,18 @@ class EditCourse extends Component {
         name: {
           type: 'string',
           title: 'Name',
-          default: ''
+          default: this.state.courses.name
         },
         purpose: {
           type: 'string',
           title: 'Purpose',
-          default: ''
+          default: this.state.courses.purpose
         },
         description: {
           type: 'string',
-          format: 'date',
-          title: 'End Date',
-          default: ''
+          format: 'textarea',
+          title: 'Description',
+          default: this.state.courses.description
         }
       }
     }
