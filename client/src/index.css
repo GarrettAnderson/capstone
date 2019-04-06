@@ -17,7 +17,8 @@ a {
 
 /* Yoga Poses Directory */
 .pose-gallery-img {
-  width: 18em;
+  width: 22em;
+  border-radius: 5px;
 }
 
 .pose-detail-img {
@@ -112,7 +113,7 @@ header h1 {
   font-family: 'Oleo Script', cursive;
   /* font-family: 'Julius Sans One', sans-serif; */
   margin-top: 0;
-  color: bisque;
+  color: #fff;
   padding-top: 0.2em;
   padding-left: 0.2em;
   text-decoration: none;
@@ -125,9 +126,9 @@ header h1 {
 }
 
 .homepage-header {
-  background: url('images/texture_background.jpg');
+  background: url('./images/texture_background.jpg');
   background-repeat: no-repeat;
-  background-position-y: -42em;
+  /* background-position-y: -42em; */
   background-size: cover;
   height: 15%;
   min-height: 7rem;
@@ -221,7 +222,7 @@ header h1 {
 }
 
 .pose-directory-container li {
-  margin-top: 2rem;
+  margin-top: 3rem;
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -313,7 +314,7 @@ header h1 {
   perspective: 600px;
   border: 1px solid #ccc;
   width: 100%;
-  height: 91%;
+  /* height: 91%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -348,4 +349,14 @@ header h1 {
 
 .card.is-flipped {
   transform: translateX(-100%) rotateY(-180deg);
+}
+
+/* Yoga Pose Courses Section */
+.course-list-item section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.class-button-wrapper li {
+  cursor: pointer;
 }

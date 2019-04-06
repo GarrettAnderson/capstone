@@ -15,19 +15,19 @@ class Home extends Component {
             <ul className="list-group">
               <Link to="/YogaHistory">
                 <li className="list-group-item">
-                  <h3>Fun Facts</h3>
+                  <h3>History</h3>
                 </li>
               </Link>
 
-              <Link to="/YogaPoses">
+              <Link to="/poses">
                 <li className="list-group-item">
-                  <h3>Pose Directory</h3>
+                  <h3>Poses</h3>
                 </li>
               </Link>
 
-              <Link to="/YogaSequenceBuilder">
+              <Link to="/courses">
                 <li className="list-group-item">
-                  <h3>Your Classes</h3>
+                  <h3>Classes</h3>
                 </li>
               </Link>
             </ul>
