@@ -20,7 +20,8 @@ class App extends Component {
             <Route exact path="/poses" component={YogaPoses} />
             <Route exact path="/poses/:id" component={YogaPose} />
             <Route exact path="/courses" component={YogaSequences} />
-            <Route exact path="/courses/edit/:id" component={EditCourse} />
+            <Route exact path="/courses/:id" component={EditCourse} />
+            {/* <Route exact path="/courses/edit/:id" component={EditCourse} /> */}
 
             {/* <Route exact path="/:YogaSequenceBuilder" component={YogaSequenceBuilder} />
             <Route exact path="/:YogaHistory" component={YogaHistory} />*/}

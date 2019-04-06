@@ -5,15 +5,29 @@ import axios from 'axios'
 
 class EditCourse extends Component {
   state = {
-    courses: [],
+    course: [],
     poses: []
   }
 
   componentDidMount() {
+    this.loadSingleCourse()
+  }
+
+  loadSingleCourse = () => {
     axios.get(`http://localhost:3000/api/courses/${this.props.match.params.id}`).then((response) => {
       console.log(response)
-      this.setState({ courses: response.data })
+      this.setState({ course: response.data })
     })
+  }
+
+  onSubmitEdit = (form) => {
+    axios
+      .put(`http://localhost:3000/api/courses/${this.props.match.params.id}`, {
+        course: form.formData
+      })
+      .then((response) => {
+        this.props.history.push('/courses')
+      })
   }
 
   render() {
@@ -25,18 +39,18 @@ class EditCourse extends Component {
         name: {
           type: 'string',
           title: 'Name',
-          default: this.state.courses.name
+          default: this.state.course.name
         },
         purpose: {
           type: 'string',
           title: 'Purpose',
-          default: this.state.courses.purpose
+          default: this.state.course.purpose
         },
         description: {
           type: 'string',
           format: 'textarea',
           title: 'Description',
-          default: this.state.courses.description
+          default: this.state.course.description
         }
       }
     }

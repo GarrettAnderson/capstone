@@ -3,14 +3,14 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import axios from 'axios'
 
 class CourseListItem extends Component {
-  // state = {
-  //   courses: [],
-  //   poses: []
-  // }
+  state = {
+    courses: [],
+    poses: []
+  }
 
   deleteCourse = () => {
     axios.delete(`http://localhost:3000/api/courses/${this.props.id}`).then((response) => {
-      this.props.load()
+      this.props.history.push('/courses')
     })
   }
 
@@ -23,7 +23,7 @@ class CourseListItem extends Component {
             <button className="view-created-class-icon">
               <i className="fas fa-angle-down fa-2x" />
             </button>
-            <Link to={`/courses/edit/${this.props.id}`}>
+            <Link to={`/courses/${this.props.id}`}>
               <button className="edit-created-class-icon">
                 <i className="fas fa-pen fa-2x" />
               </button>
