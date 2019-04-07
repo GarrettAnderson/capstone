@@ -14,6 +14,10 @@ class CourseListItem extends Component {
     })
   }
 
+  // Drop down of classes div
+  // when user click on the down arrow icon, div of classes drops down
+  // if icon is clicked, div of classes render
+
   render() {
     return (
       <li className="list-group-item course-list-item">
