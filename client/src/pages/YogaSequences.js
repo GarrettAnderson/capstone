@@ -43,6 +43,9 @@ class YogaSequences extends Component {
               )
             })}
           </ol>
+          <Link to="/courses/new">
+            <button>Add New Class</button>
+          </Link>
         </main>
       </section>
     )
