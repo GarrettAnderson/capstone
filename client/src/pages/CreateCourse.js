@@ -25,14 +25,15 @@ class CreateCourse extends Component {
 
   render() {
     const formSchema = {
-      title: 'Course',
+      title: 'Create a Course',
       type: 'object',
       required: [ 'name' ],
       properties: {
         user_id: {
-          type: 'integer',
+          type: 'string',
           title: 'User Id',
-          default: 1
+          default: 1,
+          uiSchema: { 'ui:disabled': true }
         },
         name: {
           type: 'string',
@@ -59,7 +60,7 @@ class CreateCourse extends Component {
             <h1>The Yogi Me</h1>
           </Link>
         </header>
-        <Form schema={formSchema} onSubmit={this.createCourse} />
+        <Form schema={formSchema} onSubmit={this.createCourse} className="create-class-form" />
       </section>
     )
   }

@@ -22,13 +22,18 @@ class YogaSequences extends Component {
 
   render() {
     return (
-      <section>
+      <section className="courses-container">
         <header className="header-nav">
           <Link to="/">
             <h1>The Yogi Me</h1>
           </Link>
         </header>
         <main>
+          <Link to="/courses/new">
+            <button type="button" className="create-class-btn btn btn-primary btn-block">
+              Add New Class
+            </button>
+          </Link>
           <ol className="list-group courses-list">
             {this.state.courses.map((course) => {
               return (
@@ -43,9 +48,6 @@ class YogaSequences extends Component {
               )
             })}
           </ol>
-          <Link to="/courses/new">
-            <button>Add New Class</button>
-          </Link>
         </main>
       </section>
     )
