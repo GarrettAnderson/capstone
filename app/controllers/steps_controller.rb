@@ -4,7 +4,9 @@ class StepsController < ApplicationController
   # GET /steps
   # GET /steps.json
   def index
-    @steps = Step.all
+    @course = Course.find(params[:course_id])
+    @pose = @course.poses.find(param[:pose_id])
+    @steps = @pose.steps
   end
 
   # GET /steps/1
@@ -41,13 +43,16 @@ class StepsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_step
-      @step = Step.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def step_params
-      params.require(:step).permit(:name, :order_num, :description, :pose_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_step
+    @course = Course.find(params[:course_id])
+    @pose = @course.poses.find(param[:pose_id])
+    @step = @pose.steps.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def step_params
+    params.require(:step).permit(:name, :order_num, :description, :pose_id)
+  end
 end

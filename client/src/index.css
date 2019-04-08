@@ -371,6 +371,10 @@ section.courses-container main {
   cursor: pointer;
 }
 
+.course-poses.is-shown {
+  display: none;
+}
+
 /* Create Course form */
 
 .create-class-form {

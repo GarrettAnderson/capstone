@@ -5,7 +5,8 @@ import axios from 'axios'
 class CourseListItem extends Component {
   state = {
     courses: [],
-    poses: []
+    poses: [],
+    isShown: false
   }
 
   deleteCourse = () => {
@@ -14,9 +15,9 @@ class CourseListItem extends Component {
     })
   }
 
-  // Drop down of classes div
-  // when user click on the down arrow icon, div of classes drops down
-  // if icon is clicked, div of classes render
+  showCoursePoses = (event) => {
+    this.setState({ isShown: !this.state.isShown })
+  }
 
   render() {
     return (
@@ -24,9 +25,10 @@ class CourseListItem extends Component {
         <section>
           <h3>{this.props.name}</h3>
           <span className="class-button-wrapper">
-            <button className="view-created-class-icon">
+            <button className="view-created-class-icon" onClick={this.showCoursePoses}>
               <i className="fas fa-angle-down fa-2x" />
             </button>
+
             <Link to={`/courses/${this.props.id}`}>
               <button className="edit-created-class-icon">
                 <i className="fas fa-pen fa-2x" />
@@ -37,6 +39,25 @@ class CourseListItem extends Component {
             </button>
           </span>
         </section>
+        <div
+          className={`course-poses ${this.state.isShown ? 'is-shown' : ''}`}
+          onClick={() => this.setState({ isShown: !this.state.isShown })}
+        >
+          {this.props.poses.map((pose) => {
+            return (
+              <li>
+                <figure>
+                  <img
+                    src={require('../images/yoga_stock_img.jpg')}
+                    className="pose-gallery-img"
+                    alt="specific-yoga-pose-img"
+                  />
+                  <figcaption>Yoga Pose Name</figcaption>
+                </figure>
+              </li>
+            )
+          })}
+        </div>
       </li>
     )
   }

@@ -39,6 +39,7 @@ class YogaSequences extends Component {
               return (
                 <CourseListItem
                   key={course.id}
+                  poses={course.poses}
                   id={course.id}
                   name={course.name}
                   load={this.loadCourses}

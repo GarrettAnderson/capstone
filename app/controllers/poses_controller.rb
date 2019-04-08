@@ -4,7 +4,8 @@ class PosesController < ApplicationController
   # GET /poses
   # GET /poses.json
   def index
-    @poses = Pose.all
+    @course = Course.find(params[:course_id])
+    @poses = @course.poses
   end
 
   # GET /poses/1
@@ -15,7 +16,8 @@ class PosesController < ApplicationController
   # POST /poses
   # POST /poses.json
   def create
-    @pose = Pose.new(pose_params)
+    @course = Course.find(params[:course_id])
+    @pose = @course.poses.new(pose_params)
 
     if @pose.save
       render :show, status: :created, location: @pose
@@ -41,13 +43,15 @@ class PosesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_pose
-      @pose = Pose.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def pose_params
-      params.require(:pose).permit(:image, :name, :category, :description, :physical_benefits, :psych_benefits, :Course_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_pose
+    @course = Course.find(params[:course_id])
+    @pose = @course.poses.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def pose_params
+    params.require(:pose).permit(:image, :name, :category, :description, :physical_benefits, :psych_benefits, :Course_id)
+  end
 end
