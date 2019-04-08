@@ -1,3 +1,3 @@
-json.extract! pose, :id, :image, :name, :category, :description, :physical_benefits, :psych_benefits, :Course_id, :created_at, :updated_at
+json.extract! pose, :id, :name, :category, :description, :physical_benefits, :psych_benefits, :course_id, :created_at, :updated_at
 
-json.steps poses.steps, partial: "steps/step", as: :step
+json.steps pose.steps, partial: "steps/step", as: :step

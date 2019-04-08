@@ -12,7 +12,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* Yoga Poses Directory */
@@ -360,6 +360,15 @@ section.courses-container main {
 .create-class-btn {
   height: 5rem;
   margin-bottom: 2rem;
+  background-color: hsl(335, 98%, 37%);
+  text-decoration: none !important;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.create-class-btn:hover {
+  background-color: hsl(331, 28%, 60%);
+  color: #fff;
 }
 
 .course-list-item section {

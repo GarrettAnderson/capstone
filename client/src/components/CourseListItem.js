@@ -26,7 +26,7 @@ class CourseListItem extends Component {
           <h3>{this.props.name}</h3>
           <span className="class-button-wrapper">
             <button className="view-created-class-icon" onClick={() => this.setState({ isShown: !this.state.isShown })}>
-              <i className="fas fa-angle-down fa-2x" />
+              {this.state.isShown ? <i className="fas fa-angle-down fa-2x" /> : <i className="fas fa-angle-up fa-2x" />}
             </button>
 
             <Link to={`/courses/${this.props.id}`}>
@@ -42,16 +42,14 @@ class CourseListItem extends Component {
         <div className={`course-poses ${this.state.isShown ? 'is-shown' : ''}`}>
           {this.props.poses.map((pose) => {
             return (
-              <li>
-                <figure>
-                  <img
-                    src={require('../images/yoga_stock_img.jpg')}
-                    className="pose-gallery-img"
-                    alt="specific-yoga-pose-img"
-                  />
-                  <figcaption>{pose.name}</figcaption>
-                </figure>
-              </li>
+              <figure key={pose.id}>
+                <img
+                  src={require('../images/yoga_stock_img.jpg')}
+                  className="pose-gallery-img"
+                  alt="specific-yoga-pose-img"
+                />
+                <figcaption>{pose.name}</figcaption>
+              </figure>
             )
           })}
         </div>
