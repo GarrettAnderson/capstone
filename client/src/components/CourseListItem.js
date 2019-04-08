@@ -15,9 +15,9 @@ class CourseListItem extends Component {
     })
   }
 
-  showCoursePoses = (event) => {
-    this.setState({ isShown: !this.state.isShown })
-  }
+  // showCoursePoses = (event) => {
+  //   this.setState({ isShown: !this.state.isShown })
+  // }
 
   render() {
     return (
@@ -25,7 +25,7 @@ class CourseListItem extends Component {
         <section>
           <h3>{this.props.name}</h3>
           <span className="class-button-wrapper">
-            <button className="view-created-class-icon" onClick={this.showCoursePoses}>
+            <button className="view-created-class-icon" onClick={() => this.setState({ isShown: !this.state.isShown })}>
               <i className="fas fa-angle-down fa-2x" />
             </button>
 
@@ -39,10 +39,7 @@ class CourseListItem extends Component {
             </button>
           </span>
         </section>
-        <div
-          className={`course-poses ${this.state.isShown ? 'is-shown' : ''}`}
-          onClick={() => this.setState({ isShown: !this.state.isShown })}
-        >
+        <div className={`course-poses ${this.state.isShown ? 'is-shown' : ''}`}>
           {this.props.poses.map((pose) => {
             return (
               <li>
@@ -52,7 +49,7 @@ class CourseListItem extends Component {
                     className="pose-gallery-img"
                     alt="specific-yoga-pose-img"
                   />
-                  <figcaption>Yoga Pose Name</figcaption>
+                  <figcaption>{pose.name}</figcaption>
                 </figure>
               </li>
             )

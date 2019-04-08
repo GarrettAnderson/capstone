@@ -371,6 +371,12 @@ section.courses-container main {
   cursor: pointer;
 }
 
+.course-poses {
+  display: flex;
+  width: 25rem;
+  border: 3px solid black;
+}
+
 .course-poses.is-shown {
   display: none;
 }
