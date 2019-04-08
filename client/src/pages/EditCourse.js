@@ -5,8 +5,9 @@ import axios from 'axios'
 
 class EditCourse extends Component {
   state = {
-    course: [],
-    poses: []
+    course: {
+      poses: []
+    }
   }
 
   componentDidMount() {
@@ -22,7 +23,7 @@ class EditCourse extends Component {
   }
 
   loadCoursePoses = () => {
-    axios.get(`http://localhost:3000/api/courses/${this.props.match.params.id}/poses`).then((response) => {
+    axios.get(`http://localhost:3000/api/courses/${this.props.match.params.id}/poses/`).then((response) => {
       console.log(response)
       this.setState({ poses: response.data })
     })
@@ -45,11 +46,9 @@ class EditCourse extends Component {
   }
 
   deletePose = () => {
-    axios
-      .delete(`http://localhost:3000/api/courses/${this.props.match.params.id}/poses/${this.state.poses.id}`)
-      .then((response) => {
-        this.props.history.push('/courses')
-      })
+    axios.delete(`http://localhost:3000/api/courses/${this.state.course.id}/poses/`).then((response) => {
+      this.props.history.push('/courses')
+    })
   }
 
   render() {
@@ -89,7 +88,7 @@ class EditCourse extends Component {
             Add Pose
           </button>
           <ol>
-            {this.state.poses.map((pose) => {
+            {this.state.course.poses.map((pose) => {
               return (
                 <li key={pose.id}>
                   <img
