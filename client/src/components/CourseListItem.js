@@ -6,7 +6,7 @@ class CourseListItem extends Component {
   state = {
     courses: [],
     poses: [],
-    isShown: false
+    isShown: true
   }
 
   deleteCourse = () => {
