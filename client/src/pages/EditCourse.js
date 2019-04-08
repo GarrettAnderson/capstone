@@ -24,7 +24,7 @@ class EditCourse extends Component {
 
   loadCoursePoses = () => {
     axios.get(`http://localhost:3000/api/courses/${this.props.match.params.id}/poses/`).then((response) => {
-      console.log(response)
+      console.log(response.data)
       this.setState({ poses: response.data })
     })
   }
@@ -46,9 +46,11 @@ class EditCourse extends Component {
   }
 
   deletePose = () => {
-    axios.delete(`http://localhost:3000/api/courses/${this.state.course.id}/poses/`).then((response) => {
-      this.props.history.push('/courses')
-    })
+    axios
+      .delete(`http://localhost:3000/api/courses/${this.state.course.id}/poses/${this.props.match.params.id}`)
+      .then((response) => {
+        this.props.history.push('/courses')
+      })
   }
 
   render() {
