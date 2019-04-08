@@ -11,12 +11,20 @@ class EditCourse extends Component {
 
   componentDidMount() {
     this.loadSingleCourse()
+    this.loadCoursePoses()
   }
 
   loadSingleCourse = () => {
     axios.get(`http://localhost:3000/api/courses/${this.props.match.params.id}`).then((response) => {
       console.log(response)
       this.setState({ course: response.data })
+    })
+  }
+
+  loadCoursePoses = () => {
+    axios.get(`http://localhost:3000/api/courses/${this.props.match.params.id}/poses`).then((response) => {
+      console.log(response)
+      this.setState({ poses: response.data })
     })
   }
 
@@ -62,6 +70,23 @@ class EditCourse extends Component {
           </Link>
         </header>
         <Form schema={formSchema} onSubmit={this.onSubmitEdit} />
+        <button className="btn btn-primary">Add Pose</button>
+        <section>
+          <ol>
+            {this.state.poses.map((pose) => {
+              return (
+                <li key={pose.id}>
+                  <img
+                    src={require('../images/yoga_stock_img.jpg')}
+                    className="pose-gallery-img"
+                    alt="specific-yoga-pose-img"
+                  />
+                  <p>{pose.name}</p>
+                </li>
+              )
+            })}
+          </ol>
+        </section>
       </section>
     )
   }
