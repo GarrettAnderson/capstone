@@ -38,6 +38,20 @@ class EditCourse extends Component {
       })
   }
 
+  addPose = () => {
+    axios.post(`http://localhost:3000/api/courses/${this.state.course.id}/poses`).then((response) => {
+      this.props.history.push('/courses')
+    })
+  }
+
+  deletePose = () => {
+    axios
+      .delete(`http://localhost:3000/api/courses/${this.props.match.params.id}/poses/${this.state.poses.id}`)
+      .then((response) => {
+        this.props.history.push('/courses')
+      })
+  }
+
   render() {
     const formSchema = {
       title: 'Course',
@@ -70,8 +84,10 @@ class EditCourse extends Component {
           </Link>
         </header>
         <Form schema={formSchema} onSubmit={this.onSubmitEdit} />
-        <button className="btn btn-primary">Add Pose</button>
         <section>
+          <button className="btn btn-primary" onClick={this.addPose}>
+            Add Pose
+          </button>
           <ol>
             {this.state.poses.map((pose) => {
               return (
@@ -81,7 +97,13 @@ class EditCourse extends Component {
                     className="pose-gallery-img"
                     alt="specific-yoga-pose-img"
                   />
-                  <p>{pose.name}</p>
+                  <p>
+                    {pose.name}
+                    {pose.id}
+                  </p>
+                  <button className="btn btn-danger" onClick={this.deletePose}>
+                    Delete Pose
+                  </button>
                 </li>
               )
             })}
