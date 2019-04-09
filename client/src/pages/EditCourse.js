@@ -111,9 +111,9 @@ class EditCourse extends Component {
               )
             })}
           </ol>
-          <button className="btn btn-primary" onClick={this.addPose}>
-            Add a Pose
-          </button>
+          <Link to={`/courses/${this.props.match.params.id}/poses/add/${this.state.course.poses.id}`}>
+            <button className="btn btn-primary">Add a Pose</button>
+          </Link>
         </section>
       </section>
     )
