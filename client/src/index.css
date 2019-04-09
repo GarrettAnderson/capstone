@@ -126,9 +126,9 @@ header h1 {
 }
 
 .homepage-header {
-  background: url('./images/texture_background.jpg');
+  background: url('./images/smaller_texture_background.jpg');
   background-repeat: no-repeat;
-  /* background-position-y: -42em; */
+  background-position-y: -42rem;
   background-size: cover;
   height: 15%;
   min-height: 7rem;
