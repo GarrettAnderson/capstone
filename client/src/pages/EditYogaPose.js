@@ -11,25 +11,6 @@ class EditYogaPose extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   this.loadSingleCourse()
-  //   this.loadCoursePoses()
-  // }
-
-  // loadSingleCourse = () => {
-  //   axios.get(`http://localhost:3000/api/courses/${this.props.match.params.course_id}`).then((response) => {
-  //     console.log(response)
-  //     this.setState({ course: response.data })
-  //   })
-  // }
-
-  // loadCoursePoses = () => {
-  //   axios.get(`http://localhost:3000/api/courses/${this.props.match.params.course_id}/poses/`).then((response) => {
-  //     console.log(response.data)
-  //     this.setState({ poses: response.data })
-  //   })
-  // }
-
   onSubmitEdit = (form) => {
     axios
       .put(
