@@ -7,7 +7,7 @@ class Home extends Component {
       <section className="landing-pg-container">
         <header className="homepage-header">
           <Link to="/">
-            <h1>The Yogi Me</h1>
+            <h1>Yogi Me</h1>
           </Link>
         </header>
         <main className="home-page-container">

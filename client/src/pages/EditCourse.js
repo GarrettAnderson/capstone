@@ -81,14 +81,11 @@ class EditCourse extends Component {
       <section>
         <header className="header-nav">
           <Link to="/">
-            <h1>The Yogi Me</h1>
+            <h1>Yogi Me</h1>
           </Link>
         </header>
         <Form schema={formSchema} onSubmit={this.onSubmitEdit} />
         <section>
-          <button className="btn btn-primary" onClick={this.addPose}>
-            Add Pose
-          </button>
           <ol>
             {this.state.course.poses.map((pose) => {
               return (
@@ -105,10 +102,16 @@ class EditCourse extends Component {
                   <button className="btn btn-danger" onClick={this.deletePose}>
                     Delete Pose
                   </button>
+                  <button className="btn btn-primary" onClick={this.addPose}>
+                    Edit Pose
+                  </button>
                 </li>
               )
             })}
           </ol>
+          <button className="btn btn-primary" onClick={this.addPose}>
+            Add a Pose
+          </button>
         </section>
       </section>
     )

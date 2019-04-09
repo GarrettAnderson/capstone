@@ -7,6 +7,7 @@ import YogaPose from './pages/YogaPose'
 import YogaPoses from './pages/YogaPoses'
 import YogaSequences from './pages/YogaSequences'
 import EditCourse from './pages/EditCourse'
+import EditYogaPose from './pages/EditYogaPose'
 import CreateCourse from './pages/CreateCourse'
 import YogaSequenceBuilder from './pages/YogaSequenceBuilder'
 import YogaPoseImg from './pages/YogaPoseImg'
@@ -20,6 +21,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/poses" component={YogaPoses} />
             <Route exact path="/poses/:id" component={YogaPose} />
+            <Route exact path="/poses/edit/:id" component={EditYogaPose} />
             <Route exact path="/courses" component={YogaSequences} />
             <Route exact path="/courses/new" component={CreateCourse} />
             <Route exact path="/courses/:id" component={EditCourse} />

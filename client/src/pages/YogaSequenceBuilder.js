@@ -8,7 +8,7 @@ class YogaSequenceBuilder extends Component {
       <section>
         <header className="header-nav">
           <Link to="/">
-            <h1>The Yogi Me</h1>
+            <h1>Yogi Me</h1>
           </Link>
         </header>
         <main className="create-yoga-container">

@@ -57,7 +57,7 @@ class CreateCourse extends Component {
       <section>
         <header className="header-nav">
           <Link to="/">
-            <h1>The Yogi Me</h1>
+            <h1>Yogi Me</h1>
           </Link>
         </header>
         <Form schema={formSchema} onSubmit={this.createCourse} className="create-class-form" />

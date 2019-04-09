@@ -11,7 +11,7 @@ class YogaPose extends Component {
       <section className="single-pose-container">
         <header className="header-nav">
           <Link to="/">
-            <h1>The Yogi Me</h1>
+            <h1>Yogi Me</h1>
           </Link>
         </header>
 
