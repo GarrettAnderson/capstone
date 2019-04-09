@@ -20,7 +20,7 @@ class PosesController < ApplicationController
     @pose = @course.poses.new(pose_params)
 
     if @pose.save
-      render :show, status: :created, location: @pose
+      render :show, status: :created
     else
       render json: @pose.errors, status: :unprocessable_entity
     end
@@ -30,7 +30,7 @@ class PosesController < ApplicationController
   # PATCH/PUT /poses/1.json
   def update
     if @pose.update(pose_params)
-      render :show, status: :ok, location: @pose
+      render :show, status: :ok
     else
       render json: @pose.errors, status: :unprocessable_entity
     end

@@ -39,17 +39,16 @@ class CourseListItem extends Component {
             </button>
           </span>
         </section>
+        {/* Below is the div for showing poses per class */}
         <div className={`course-poses ${this.state.isShown ? 'is-shown' : ''}`}>
           {this.props.poses.map((pose) => {
             return (
               <figure key={pose.id}>
-                <Link to={`/poses/edit/${this.props.poses.id}`}>
-                  <img
-                    src={require('../images/yoga_stock_img.jpg')}
-                    className="pose-gallery-img"
-                    alt="specific-yoga-pose-img"
-                  />
-                </Link>
+                <img
+                  src={require('../images/yoga_stock_img.jpg')}
+                  className="pose-gallery-img"
+                  alt="specific-yoga-pose-img"
+                />
                 <figcaption>{pose.name}</figcaption>
               </figure>
             )

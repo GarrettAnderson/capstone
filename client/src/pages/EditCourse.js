@@ -39,11 +39,11 @@ class EditCourse extends Component {
       })
   }
 
-  addPose = () => {
-    axios.post(`http://localhost:3000/api/courses/${this.state.course.id}/poses`).then((response) => {
-      this.props.history.push('/courses')
-    })
-  }
+  // addPose = () => {
+  //   axios.post(`http://localhost:3000/api/courses/${this.state.course.id}/poses`).then((response) => {
+  //     this.props.history.push('/courses')
+  //   })
+  // }
 
   deletePose = () => {
     axios
@@ -90,11 +90,13 @@ class EditCourse extends Component {
             {this.state.course.poses.map((pose) => {
               return (
                 <li key={pose.id}>
-                  <img
-                    src={require('../images/yoga_stock_img.jpg')}
-                    className="pose-gallery-img"
-                    alt="specific-yoga-pose-img"
-                  />
+                  <Link to={`/courses/${this.props.match.params.id}/poses/edit/${pose.id}`}>
+                    <img
+                      src={require('../images/yoga_stock_img.jpg')}
+                      className="pose-gallery-img"
+                      alt="specific-yoga-pose-img"
+                    />
+                  </Link>
                   <p>
                     {pose.name}
                     {pose.id}
@@ -102,9 +104,9 @@ class EditCourse extends Component {
                   <button className="btn btn-danger" onClick={this.deletePose}>
                     Delete Pose
                   </button>
-                  <button className="btn btn-primary" onClick={this.addPose}>
+                  {/* <button className="btn btn-primary" onClick={this.addPose}>
                     Edit Pose
-                  </button>
+                  </button> */}
                 </li>
               )
             })}

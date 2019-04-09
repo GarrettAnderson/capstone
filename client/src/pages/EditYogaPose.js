@@ -5,27 +5,61 @@ import Form from 'react-jsonschema-form'
 
 class EditYogaPose extends Component {
   state = {
-    isFlipped: false
+    isFlipped: false,
+    course: {
+      poses: []
+    }
+  }
+
+  // componentDidMount() {
+  //   this.loadSingleCourse()
+  //   this.loadCoursePoses()
+  // }
+
+  // loadSingleCourse = () => {
+  //   axios.get(`http://localhost:3000/api/courses/${this.props.match.params.course_id}`).then((response) => {
+  //     console.log(response)
+  //     this.setState({ course: response.data })
+  //   })
+  // }
+
+  // loadCoursePoses = () => {
+  //   axios.get(`http://localhost:3000/api/courses/${this.props.match.params.course_id}/poses/`).then((response) => {
+  //     console.log(response.data)
+  //     this.setState({ poses: response.data })
+  //   })
+  // }
+
+  onSubmitEdit = (form) => {
+    axios
+      .put(
+        `http://localhost:3000/api/courses/${this.props.match.params.course_id}/poses/${this.props.match.params.id}`,
+        {
+          pose: form.formData
+        }
+      )
+      .then((response) => {
+        this.props.history.push('/')
+      })
   }
 
   render() {
     const formSchema = {
-      title: 'Create a Course',
+      title: 'Edit Pose',
       type: 'object',
       required: [ 'name' ],
       properties: {
-        user_id: {
+        course_id: {
           type: 'string',
-          title: 'User Id',
-          default: 1,
-          uiSchema: { 'ui:disabled': true }
+          title: 'Course Id',
+          default: `${this.props.match.params.course_id}`
         },
         name: {
           type: 'string',
           title: 'Sanskrit Name',
           default: ''
         },
-        name: {
+        alt_name: {
           type: 'string',
           title: 'English Name',
           default: ''
@@ -33,6 +67,36 @@ class EditYogaPose extends Component {
         position: {
           type: 'string',
           title: 'Position Type',
+          default: ''
+        },
+        step_1: {
+          type: 'string',
+          title: 'Step 1',
+          default: ''
+        },
+        step_2: {
+          type: 'string',
+          title: 'Step 2',
+          default: ''
+        },
+        step_3: {
+          type: 'string',
+          title: 'Step 3',
+          default: ''
+        },
+        step_4: {
+          type: 'string',
+          title: 'Step 4',
+          default: ''
+        },
+        physical_benefits: {
+          type: 'string',
+          title: 'Physical Benefits',
+          default: ''
+        },
+        psych_benefits: {
+          type: 'string',
+          title: 'Psychological Benefits',
           default: ''
         },
         description: {
@@ -52,12 +116,13 @@ class EditYogaPose extends Component {
         </header>
 
         <div className="scene scene--card">
-          <div
-            className={`card ${this.state.isFlipped ? 'is-flipped' : ''}`}
-            onClick={() => this.setState({ isFlipped: !this.state.isFlipped })}
-          >
+          <div className={`card ${this.state.isFlipped ? 'is-flipped' : ''}`}>
             <div className="card__face card__face--front">
-              <img src={require('../images/yoga_stock_img.jpg')} alt="tree-pose-image" />
+              <img
+                src={require('../images/yoga_stock_img.jpg')}
+                alt="tree-pose-image"
+                onClick={() => this.setState({ isFlipped: !this.state.isFlipped })}
+              />
             </div>
             <div className="detail-card-outline card__face card__face--back">
               <Form schema={formSchema} onSubmit={this.onSubmitEdit} />
