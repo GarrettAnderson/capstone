@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import axios from 'axios'
 import Form from 'react-jsonschema-form'
 import { DirectUploadProvider } from 'react-activestorage-provider'
-import DefaultDirectUploadRender from './DefaultDirectUploadRender'
+import DefaultDirectUploadRender from '../components/DefaultDirectUploadRender'
 import yogaStockImage from '../images/yoga_stock_img.jpg'
 
 class EditYogaPose extends Component {
@@ -11,7 +11,8 @@ class EditYogaPose extends Component {
     isFlipped: false,
     course: {
       poses: []
-    }
+    },
+    signedId: ''
   }
 
   onSubmitEdit = (form) => {

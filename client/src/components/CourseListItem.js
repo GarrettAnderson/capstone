@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import axios from 'axios'
+import yogaStockImage from '../images/yoga_stock_img.jpg'
 
 class CourseListItem extends Component {
   state = {
@@ -44,11 +45,7 @@ class CourseListItem extends Component {
           {this.props.poses.map((pose) => {
             return (
               <figure key={pose.id}>
-                <img
-                  src={require('../images/yoga_stock_img.jpg')}
-                  className="pose-gallery-img"
-                  alt="specific-yoga-pose-img"
-                />
+                <img src={pose.photo_url} className="pose-gallery-img" alt="specific-yoga-pose-img" />
                 <figcaption>{pose.name}</figcaption>
               </figure>
             )

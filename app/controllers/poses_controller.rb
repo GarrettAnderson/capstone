@@ -58,6 +58,6 @@ class PosesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def pose_params
-    params.require(:pose).permit(:name, :category, :description, :physical_benefits, :psych_benefits, :course_id)
+    params.require(:pose).permit(:name, :category, :description, :physical_benefits, :psych_benefits, :photo, :course_id)
   end
 end
