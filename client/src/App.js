@@ -26,7 +26,7 @@ class App extends Component {
             <Route exact path="/courses/new" component={CreateCourse} />
             <Route exact path="/courses/:id" component={EditCourse} />
             <Route exact path="/courses/:course_id/poses/edit/:id" component={EditYogaPose} />
-            <Route exact path="/courses/:course_id/poses/add/:id" component={AddYogaPose} />
+            <Route exact path="/courses/:course_id/poses/add" component={AddYogaPose} />
           </Switch>
         </Router>
       </div>

@@ -83,7 +83,7 @@ class AddYogaPose extends Component {
               />
             </div>
             <div className="detail-card-outline card__face card__face--back">
-              <Form schema={formSchema} onSubmit={this.onSubmitEdit} />
+              <Form schema={formSchema} onSubmit={this.onSubmitEdit} className="add-new-pose" />
             </div>
           </div>
         </div>

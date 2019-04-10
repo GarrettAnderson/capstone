@@ -427,12 +427,17 @@ section.courses-container main {
   overflow: auto;
   display: flex;
   list-style: none;
+  padding-left: 2rem;
 }
 
 .edit-pose-gallery-img {
   width: 15em;
   border-radius: 5px;
   margin-right: 2rem;
+}
+
+.edit-course-form legend {
+  margin-left: 1rem;
 }
 
 .edit-course-form .form-group {
@@ -470,6 +475,15 @@ section.courses-container main {
 }
 
 .edit-yoga-course .add-btn:hover {
+  background-color: hsl(331, 28%, 60%);
+}
+
+.add-new-pose button {
+  background-color: hsl(335, 98%, 37%);
+  margin-bottom: 1rem;
+}
+
+.add-new-pose button:hover {
   background-color: hsl(331, 28%, 60%);
 }
 

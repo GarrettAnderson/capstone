@@ -24,6 +24,16 @@ class EditYogaPose extends Component {
       })
   }
 
+  // deletePose = () => {
+  //   axios
+  //     .delete(
+  //       `http://localhost:3000/api/courses/${this.props.match.params.course_id}/poses/${this.props.match.params.id}`
+  //     )
+  //     .then((response) => {
+  //       this.props.history.push('/courses')
+  //     })
+  // }
+
   render() {
     const formSchema = {
       title: 'Edit Pose',
@@ -86,6 +96,9 @@ class EditYogaPose extends Component {
             </div>
             <div className="detail-card-outline card__face card__face--back">
               <Form schema={formSchema} onSubmit={this.onSubmitEdit} />
+              {/* <button className="btn btn-danger delete-btn" onClick={this.deletePose}>
+                Delete Pose
+              </button> */}
             </div>
           </div>
         </div>
