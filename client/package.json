@@ -25,6 +25,7 @@
     "axios": "^0.18.0",
     "json": "^9.0.6",
     "react": "^16.8.4",
+    "react-activestorage-provider": "^0.8.0",
     "react-dom": "^16.8.4",
     "react-fontawesome": "^1.6.1",
     "react-jsonschema-form": "^1.4.0",

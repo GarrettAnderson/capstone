@@ -8,6 +8,12 @@ class PosesController < ApplicationController
     @poses = @course.poses
   end
 
+  def all
+    @poses = Pose.all
+
+    render :index
+  end
+
   # GET /poses/1
   # GET /poses/1.json
   def show
