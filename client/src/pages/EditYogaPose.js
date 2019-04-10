@@ -95,10 +95,7 @@ class EditYogaPose extends Component {
               />
             </div>
             <div className="detail-card-outline card__face card__face--back">
-              <Form schema={formSchema} onSubmit={this.onSubmitEdit} />
-              {/* <button className="btn btn-danger delete-btn" onClick={this.deletePose}>
-                Delete Pose
-              </button> */}
+              <Form schema={formSchema} onSubmit={this.onSubmitEdit} className="edit-pose-form" />
             </div>
           </div>
         </div>

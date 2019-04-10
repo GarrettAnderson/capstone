@@ -32,8 +32,7 @@ class CreateCourse extends Component {
         user_id: {
           type: 'string',
           title: 'User Id',
-          default: 1,
-          uiSchema: { 'ui:disabled': true }
+          default: 1
         },
         name: {
           type: 'string',

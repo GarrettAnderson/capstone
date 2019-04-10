@@ -378,6 +378,7 @@ section.courses-container main {
 .course-list-item section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .course-list-item button {
@@ -487,6 +488,15 @@ section.courses-container main {
   background-color: hsl(331, 28%, 60%);
 }
 
+.edit-pose-form button {
+  background-color: hsl(335, 98%, 37%);
+  margin-bottom: 1rem;
+}
+
+.edit-pose-form button:hover {
+  background-color: hsl(331, 28%, 60%);
+}
+
 /* Create Course form */
 
 .create-class-form {
@@ -494,6 +504,14 @@ section.courses-container main {
   flex-direction: column;
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+.create-class-form button {
+  background-color: hsl(335, 98%, 37%);
+}
+
+.create-class-form button:hover {
+  background-color: hsl(331, 28%, 60%);
 }
 
 .create-class-form #root__title {
