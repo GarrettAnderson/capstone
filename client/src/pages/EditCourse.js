@@ -47,7 +47,7 @@ class EditCourse extends Component {
 
   deletePose = () => {
     axios
-      .delete(`http://localhost:3000/api/courses/${this.state.course.id}/poses/${this.props.match.params.id}`)
+      .delete(`http://localhost:3000/api/courses/${this.state.course.id}/poses/${this.state.course.pose.id}`)
       .then((response) => {
         this.props.history.push('/courses')
       })
@@ -55,7 +55,7 @@ class EditCourse extends Component {
 
   render() {
     const formSchema = {
-      title: 'Course',
+      title: this.state.course.name,
       type: 'object',
       required: [ 'name' ],
       properties: {
@@ -84,8 +84,8 @@ class EditCourse extends Component {
             <h1>Yogi Me</h1>
           </Link>
         </header>
-        <Form schema={formSchema} onSubmit={this.onSubmitEdit} />
-        <section>
+        <Form schema={formSchema} onSubmit={this.onSubmitEdit} className="edit-course-form" />
+        <section className="edit-yoga-course">
           <ol>
             {this.state.course.poses.map((pose) => {
               return (
@@ -93,7 +93,7 @@ class EditCourse extends Component {
                   <Link to={`/courses/${this.props.match.params.id}/poses/edit/${pose.id}`}>
                     <img
                       src={require('../images/yoga_stock_img.jpg')}
-                      className="pose-gallery-img"
+                      className="edit-pose-gallery-img"
                       alt="specific-yoga-pose-img"
                     />
                   </Link>
@@ -101,7 +101,7 @@ class EditCourse extends Component {
                     {pose.name}
                     {pose.id}
                   </p>
-                  <button className="btn btn-danger" onClick={this.deletePose}>
+                  <button className="btn btn-danger delete-btn" onClick={this.deletePose}>
                     Delete Pose
                   </button>
                   {/* <button className="btn btn-primary" onClick={this.addPose}>
@@ -112,7 +112,7 @@ class EditCourse extends Component {
             })}
           </ol>
           <Link to={`/courses/${this.props.match.params.id}/poses/add/${this.state.course.poses.id}`}>
-            <button className="btn btn-primary">Add a Pose</button>
+            <button className="btn btn-primary add-btn">Add a Pose</button>
           </Link>
         </section>
       </section>

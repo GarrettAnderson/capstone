@@ -50,26 +50,6 @@ class EditYogaPose extends Component {
           title: 'Position Type',
           default: ''
         },
-        step_1: {
-          type: 'string',
-          title: 'Step 1',
-          default: ''
-        },
-        step_2: {
-          type: 'string',
-          title: 'Step 2',
-          default: ''
-        },
-        step_3: {
-          type: 'string',
-          title: 'Step 3',
-          default: ''
-        },
-        step_4: {
-          type: 'string',
-          title: 'Step 4',
-          default: ''
-        },
         physical_benefits: {
           type: 'string',
           title: 'Physical Benefits',
@@ -95,7 +75,6 @@ class EditYogaPose extends Component {
             <h1>Yogi Me</h1>
           </Link>
         </header>
-
         <div className="scene scene--card">
           <div className={`card ${this.state.isFlipped ? 'is-flipped' : ''}`}>
             <div className="card__face card__face--front">
