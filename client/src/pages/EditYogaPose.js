@@ -10,29 +10,24 @@ class EditYogaPose extends Component {
   state = {
     isFlipped: true,
     course: {},
-    poses: [],
+    pose: {},
     signedId: ''
   }
 
   componentDidMount() {
     axios
-      .get(
-        `/api/courses/${this.props.match.params.course_id}/poses/${this.props.match.params.id}}`
-      )
+      .get(`/api/courses/${this.props.match.params.course_id}/poses/${this.props.match.params.id}}`)
       .then((response) => {
         console.log(response.data)
-        this.setState({ poses: response.data })
+        this.setState({ pose: response.data })
       })
   }
 
   onSubmitEdit = (form) => {
     axios
-      .put(
-        `/api/courses/${this.props.match.params.course_id}/poses/${this.props.match.params.id}`,
-        {
-          pose: Object.assign(form.formData, { photo: this.state.signedId })
-        }
-      )
+      .put(`/api/courses/${this.props.match.params.course_id}/poses/${this.props.match.params.id}`, {
+        pose: Object.assign(form.formData, { photo: this.state.signedId })
+      })
       .then((response) => {
         this.props.history.push(`/courses/${this.props.match.params.course_id}`)
       })
@@ -47,33 +42,33 @@ class EditYogaPose extends Component {
         name: {
           type: 'string',
           title: 'Sanskrit Name',
-          default: `${this.state.poses.name}`
+          default: `${this.state.pose.name}`
         },
         alt_name: {
           type: 'string',
           title: 'English Name',
-          default: `${this.state.poses.category}`
+          default: `${this.state.pose.category}`
         },
         position: {
           type: 'string',
           title: 'Position Type',
-          default: `${this.state.poses.category}`
+          default: `${this.state.pose.category}`
         },
         physical_benefits: {
           type: 'string',
           title: 'Physical Benefits',
-          default: `${this.state.poses.physical_benefits}`
+          default: `${this.state.pose.physical_benefits}`
         },
         psych_benefits: {
           type: 'string',
           title: 'Psychological Benefits',
-          default: `${this.state.poses.psych_benefits}`
+          default: `${this.state.pose.psych_benefits}`
         },
         description: {
           type: 'string',
           format: 'textarea',
           title: 'Description',
-          default: `${this.state.poses.description}`
+          default: `${this.state.pose.description}`
         }
       }
     }
@@ -88,7 +83,7 @@ class EditYogaPose extends Component {
           <div className={`card ${this.state.isFlipped ? 'is-flipped' : ''}`}>
             <div className="card__face card__face--front">
               <img
-                src={yogaStockImage}
+                src={this.state.pose.photo_url || yogaStockImage}
                 alt="tree-pose-image"
                 onClick={() => this.setState({ isFlipped: !this.state.isFlipped })}
               />

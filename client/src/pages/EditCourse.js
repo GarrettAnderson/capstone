@@ -46,11 +46,9 @@ class EditCourse extends Component {
   // }
 
   deletePose = (pose) => {
-    axios
-      .delete(`/api/courses/${this.props.match.params.id}/poses/${pose.id}`)
-      .then((response) => {
-        this.loadCoursePoses()
-      })
+    axios.delete(`/api/courses/${this.props.match.params.id}/poses/${pose.id}`).then((response) => {
+      this.loadCoursePoses()
+    })
   }
 
   render() {
@@ -91,7 +89,11 @@ class EditCourse extends Component {
               return (
                 <li key={pose.id}>
                   <Link to={`/courses/${this.props.match.params.id}/poses/edit/${pose.id}`}>
-                    <img src={yogaStockImg} className="edit-pose-gallery-img" alt="specific-yoga-pose-img" />
+                    <img
+                      src={this.state.poses.photo_url || yogaStockImg}
+                      className="edit-pose-gallery-img"
+                      alt="specific-yoga-pose-img"
+                    />
                   </Link>
                   <p>
                     {pose.name}

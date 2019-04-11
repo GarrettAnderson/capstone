@@ -30,11 +30,11 @@ class AddYogaPose extends Component {
       type: 'object',
       required: [ 'name' ],
       properties: {
-        course_id: {
-          type: 'string',
-          title: 'Course Id',
-          default: `${this.props.match.params.course_id}`
-        },
+        // course_id: {
+        //   type: 'string',
+        //   title: 'Course Id',
+        //   default: `${this.props.match.params.course_id}`
+        // },
         name: {
           type: 'string',
           title: 'Sanskrit Name',

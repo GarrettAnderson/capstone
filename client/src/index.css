@@ -443,7 +443,8 @@ section.courses-container main {
 }
 
 .edit-yoga-course {
-  padding-top: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background: url('images/buddha_background.jpg');
   height: 91%;
   background-size: cover;
