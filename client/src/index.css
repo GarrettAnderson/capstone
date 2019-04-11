@@ -363,8 +363,8 @@ section.courses-container {
 }
 
 section.courses-container main {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background: url('images/buddha_background.jpg');
   height: 91%;
   background-size: cover;
