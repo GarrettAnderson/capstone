@@ -124,7 +124,7 @@ header h1 {
 .homepage-header {
   background: url('./images/smaller_texture_background.jpg');
   background-repeat: no-repeat;
-  background-position-y: -42rem;
+  /* background-position-y: -30rem; */
   background-size: cover;
   height: 15%;
   min-height: 7rem;
@@ -177,7 +177,7 @@ header h1 {
   height: 14rem;
   /* padding: 5rem; */
   text-align: center;
-  margin: 0rem 8rem;
+  /* margin: 0rem 8rem; */
   border-radius: 7rem;
   width: 14rem;
   display: flex;
