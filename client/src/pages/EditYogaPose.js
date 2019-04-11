@@ -79,28 +79,30 @@ class EditYogaPose extends Component {
             <h1>Yogi Me</h1>
           </Link>
         </header>
-        <div className="scene scene--card">
-          <div className={`card ${this.state.isFlipped ? 'is-flipped' : ''}`}>
-            <div className="card__face card__face--front">
-              <img
-                src={yogaStockImage}
-                alt="tree-pose-image"
-                onClick={() => this.setState({ isFlipped: !this.state.isFlipped })}
-              />
-            </div>
-            <div className="detail-card-outline card__face card__face--back">
-              <Form schema={formSchema} onSubmit={this.onSubmitEdit} className="edit-pose-form">
-                <DirectUploadProvider
-                  onSuccess={(signedIds) => this.setState({ signedId: signedIds[0] })}
-                  render={DefaultDirectUploadRender}
+        <section>
+          <div className="scene scene--card">
+            <div className={`card ${this.state.isFlipped ? 'is-flipped' : ''}`}>
+              <div className="card__face card__face--front">
+                <img
+                  src={yogaStockImage}
+                  alt="tree-pose-image"
+                  onClick={() => this.setState({ isFlipped: !this.state.isFlipped })}
                 />
-                <button className="btn btn-info" type="submit">
-                  Submit
-                </button>
-              </Form>
+              </div>
+              <div className="detail-card-outline card__face card__face--back">
+                <Form schema={formSchema} onSubmit={this.onSubmitEdit} className="edit-pose-form">
+                  <DirectUploadProvider
+                    onSuccess={(signedIds) => this.setState({ signedId: signedIds[0] })}
+                    render={DefaultDirectUploadRender}
+                  />
+                  <button className="btn btn-info" type="submit">
+                    Submit
+                  </button>
+                </Form>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </section>
     )
   }

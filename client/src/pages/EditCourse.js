@@ -83,8 +83,8 @@ class EditCourse extends Component {
             <h1>Yogi Me</h1>
           </Link>
         </header>
-        <Form schema={formSchema} onSubmit={this.onSubmitEdit} className="edit-course-form" />
         <section className="edit-yoga-course">
+          <Form schema={formSchema} onSubmit={this.onSubmitEdit} className="edit-course-form" />
           <ol>
             {this.state.poses.map((pose) => {
               return (
