@@ -41,3 +41,5 @@ end
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "aws-sdk-s3", "~> 1.36"
+
+gem "jwt", "~> 2.1"

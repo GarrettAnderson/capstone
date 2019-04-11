@@ -5,6 +5,7 @@ const DOMAIN = 'ganderson.auth0.com'
 const CLIENTID = 'ZSAox1SHe4opSkoLs6AWltkl8KVJ10So'
 const AFTER_LOGIN = '/'
 const AFTER_LOGOUT = '/'
+const FAILED_LOGIN = '/'
 
 class Auth {
   userProfile
