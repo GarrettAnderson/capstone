@@ -8,11 +8,21 @@ import yogaStockImage from '../images/yoga_stock_img.jpg'
 
 class EditYogaPose extends Component {
   state = {
-    isFlipped: false,
-    course: {
-      poses: []
-    },
+    isFlipped: true,
+    course: {},
+    poses: [],
     signedId: ''
+  }
+
+  componentDidMount() {
+    axios
+      .get(
+        `http://localhost:3000/api/courses/${this.props.match.params.course_id}/poses/${this.props.match.params.id}}`
+      )
+      .then((response) => {
+        console.log(response.data)
+        this.setState({ poses: response.data })
+      })
   }
 
   onSubmitEdit = (form) => {
@@ -34,41 +44,41 @@ class EditYogaPose extends Component {
       type: 'object',
       required: [ 'name' ],
       properties: {
-        course_id: {
-          type: 'string',
-          title: 'Course Id',
-          default: `${this.props.match.params.course_id}`
-        },
+        // course_id: {
+        //   type: 'string',
+        //   title: 'Course Id',
+        //   default: `${this.props.match.params.course_id}`
+        // },
         name: {
           type: 'string',
           title: 'Sanskrit Name',
-          default: ''
+          default: `${this.state.poses.name}`
         },
         alt_name: {
           type: 'string',
           title: 'English Name',
-          default: ''
+          default: `${this.state.poses.category}`
         },
         position: {
           type: 'string',
           title: 'Position Type',
-          default: ''
+          default: `${this.state.poses.category}`
         },
         physical_benefits: {
           type: 'string',
           title: 'Physical Benefits',
-          default: ''
+          default: `${this.state.poses.physical_benefits}`
         },
         psych_benefits: {
           type: 'string',
           title: 'Psychological Benefits',
-          default: ''
+          default: `${this.state.poses.psych_benefits}`
         },
         description: {
           type: 'string',
           format: 'textarea',
           title: 'Description',
-          default: ''
+          default: `${this.state.poses.description}`
         }
       }
     }

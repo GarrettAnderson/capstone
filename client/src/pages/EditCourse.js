@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Form from 'react-jsonschema-form'
 import axios from 'axios'
+import yogaStockImg from '../images/yoga_stock_img.jpg'
 
 class EditCourse extends Component {
   state = {
@@ -90,11 +91,7 @@ class EditCourse extends Component {
               return (
                 <li key={pose.id}>
                   <Link to={`/courses/${this.props.match.params.id}/poses/edit/${pose.id}`}>
-                    <img
-                      src={require('../images/yoga_stock_img.jpg')}
-                      className="edit-pose-gallery-img"
-                      alt="specific-yoga-pose-img"
-                    />
+                    <img src={yogaStockImg} className="edit-pose-gallery-img" alt="specific-yoga-pose-img" />
                   </Link>
                   <p>
                     {pose.name}
