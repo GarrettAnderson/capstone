@@ -24,7 +24,7 @@ class YogaPose extends Component {
           </Link>
         </header>
 
-        <div className="scene scene--card">
+        <div className="scene scene--card yoga-pose-container">
           <div
             className={`card ${this.state.isFlipped ? 'is-flipped' : ''}`}
             onClick={() => this.setState({ isFlipped: !this.state.isFlipped })}

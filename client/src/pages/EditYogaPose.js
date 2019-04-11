@@ -24,7 +24,7 @@ class EditYogaPose extends Component {
         }
       )
       .then((response) => {
-        this.props.history.push('/')
+        this.props.history.push(`/courses/${this.props.match.params.course_id}`)
       })
   }
 
