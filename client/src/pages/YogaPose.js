@@ -1,9 +1,18 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 class YogaPose extends Component {
   state = {
-    isFlipped: false
+    isFlipped: false,
+    pose: []
+  }
+
+  componentDidMount() {
+    axios.get(`http://localhost:3000/api/poses/${this.props.match.params.id}`).then((response) => {
+      console.log(response)
+      this.setState({ poses: response.data })
+    })
   }
 
   render() {
@@ -25,7 +34,7 @@ class YogaPose extends Component {
             </div>
             <div className="detail-card-outline card__face card__face--back">
               <ol className="pose-details-list list-group">
-                <li className="list-group-item">Sanskrit Name</li>
+                <li className="list-group-item">{this.state.pose.name}</li>
                 <li className="list-group-item">English Name</li>
                 <li className="list-group-item">Position Type</li>
                 <li className="list-group-item">
