@@ -14,7 +14,7 @@ class YogaSequences extends Component {
   }
 
   loadCourses = () => {
-    axios.get('http://localhost:3000/api/courses').then((response) => {
+    axios.get('/api/courses').then((response) => {
       console.log(response)
       this.setState({ courses: response.data })
     })

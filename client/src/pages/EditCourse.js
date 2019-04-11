@@ -15,7 +15,7 @@ class EditCourse extends Component {
   }
 
   loadSingleCourse = () => {
-    axios.get(`http://localhost:3000/api/courses/${this.props.match.params.id}`).then((response) => {
+    axios.get(`/api/courses/${this.props.match.params.id}`).then((response) => {
       console.log(response)
       this.setState({ course: response.data })
       this.setState({ poses: response.data.poses })
@@ -23,7 +23,7 @@ class EditCourse extends Component {
   }
 
   loadCoursePoses = () => {
-    axios.get(`http://localhost:3000/api/courses/${this.props.match.params.id}`).then((response) => {
+    axios.get(`/api/courses/${this.props.match.params.id}`).then((response) => {
       console.log(response.data)
       this.setState({ poses: response.data.poses })
     })
@@ -31,7 +31,7 @@ class EditCourse extends Component {
 
   onSubmitEdit = (form) => {
     axios
-      .put(`http://localhost:3000/api/courses/${this.props.match.params.id}`, {
+      .put(`/api/courses/${this.props.match.params.id}`, {
         course: form.formData
       })
       .then((response) => {
@@ -40,14 +40,14 @@ class EditCourse extends Component {
   }
 
   // addPose = () => {
-  //   axios.post(`http://localhost:3000/api/courses/${this.state.course.id}/poses`).then((response) => {
+  //   axios.post(`/api/courses/${this.state.course.id}/poses`).then((response) => {
   //     this.props.history.push('/courses')
   //   })
   // }
 
   deletePose = (pose) => {
     axios
-      .delete(`http://localhost:3000/api/courses/${this.props.match.params.id}/poses/${pose.id}`)
+      .delete(`/api/courses/${this.props.match.params.id}/poses/${pose.id}`)
       .then((response) => {
         this.loadCoursePoses()
       })

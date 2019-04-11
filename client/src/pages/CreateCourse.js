@@ -11,7 +11,7 @@ class CreateCourse extends Component {
 
   createCourse = (form) => {
     axios
-      .post('http://localhost:3000/api/courses', {
+      .post('/api/courses', {
         course: form.formData
       })
       .then((response) => {

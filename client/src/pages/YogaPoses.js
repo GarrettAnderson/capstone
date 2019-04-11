@@ -9,7 +9,7 @@ class YogaPoses extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3000/api/poses').then((response) => {
+    axios.get('/api/poses').then((response) => {
       console.log(response)
       this.setState({ poses: response.data })
     })
@@ -30,7 +30,7 @@ class YogaPoses extends Component {
             {/* <section className="pose-directory-row"> */}
             {this.state.poses.map((pose) => {
               return (
-                <Link to={`/poses/${pose.id}`} className="pose-directory-row">
+                <Link to={`/courses/${pose.course_id}/poses/${pose.id}`} key={pose.id} className="pose-directory-row">
                   <li>
                     <figure>
                       <img src={yogaStockImg} className="pose-gallery-img" alt="specific-yoga-pose-img" />
@@ -40,104 +40,6 @@ class YogaPoses extends Component {
                 </Link>
               )
             })}
-
-            {/* <Link to="/Poses/1">
-              <li>
-                <figure>
-                  <img
-                    src={require('../images/yoga_stock_img.jpg')}
-                    className="pose-gallery-img"
-                    alt="specific-yoga-pose-img"
-                  />
-                  <figcaption>Yoga Pose Name</figcaption>
-                </figure>
-              </li>
-            </Link>
-            <Link to="/Poses/1">
-              <li>
-                <figure>
-                  <img
-                    src={require('../images/yoga_stock_img.jpg')}
-                    className="pose-gallery-img"
-                    alt="specific-yoga-pose-img"
-                  />
-                  <figcaption>Yoga Pose Name</figcaption>
-                </figure>
-              </li>
-            </Link>
-            <Link to="/Poses/1">
-              <li>
-                <figure>
-                  <img
-                    src={require('../images/yoga_stock_img.jpg')}
-                    className="pose-gallery-img"
-                    alt="specific-yoga-pose-img"
-                  />
-                  <figcaption>Yoga Pose Name</figcaption>
-                </figure>
-              </li>
-            </Link>
-            <Link to="/Poses/1">
-              <li>
-                <figure>
-                  <img
-                    src={require('../images/yoga_stock_img.jpg')}
-                    className="pose-gallery-img"
-                    alt="specific-yoga-pose-img"
-                  />
-                  <figcaption>Yoga Pose Name</figcaption>
-                </figure>
-              </li>
-            </Link>
-            <Link to="/Poses/1">
-              <li>
-                <figure>
-                  <img
-                    src={require('../images/yoga_stock_img.jpg')}
-                    className="pose-gallery-img"
-                    alt="specific-yoga-pose-img"
-                  />
-                  <figcaption>Yoga Pose Name</figcaption>
-                </figure>
-              </li>
-            </Link>
-            <Link to="/Poses/1">
-              <li>
-                <figure>
-                  <img
-                    src={require('../images/yoga_stock_img.jpg')}
-                    className="pose-gallery-img"
-                    alt="specific-yoga-pose-img"
-                  />
-                  <figcaption>Yoga Pose Name</figcaption>
-                </figure>
-              </li>
-            </Link>
-            <Link to="/Poses/1">
-              <li>
-                <figure>
-                  <img
-                    src={require('../images/yoga_stock_img.jpg')}
-                    className="pose-gallery-img"
-                    alt="specific-yoga-pose-img"
-                  />
-                  <figcaption>Yoga Pose Name</figcaption>
-                </figure>
-              </li>
-            </Link>
-            <Link to="/Poses/1">
-              <li>
-                <figure>
-                  <img
-                    src={require('../images/yoga_stock_img.jpg')}
-                    className="pose-gallery-img"
-                    alt="specific-yoga-pose-img"
-                  />
-                  <figcaption>Yoga Pose Name</figcaption>
-                </figure>
-              </li>
-            </Link> */}
-            {/* </section> */}
           </ol>
         </main>
       </section>

@@ -11,7 +11,7 @@ class CourseListItem extends Component {
   }
 
   deleteCourse = () => {
-    axios.delete(`http://localhost:3000/api/courses/${this.props.id}`).then((response) => {
+    axios.delete(`/api/courses/${this.props.id}`).then((response) => {
       this.props.load()
     })
   }

@@ -16,7 +16,7 @@ class AddYogaPose extends Component {
 
   onSubmitEdit = (form) => {
     axios
-      .post(`http://localhost:3000/api/courses/${this.props.match.params.course_id}/poses`, {
+      .post(`/api/courses/${this.props.match.params.course_id}/poses`, {
         pose: Object.assign(form.formData, { photo: this.state.signedId })
       })
       .then((response) => {

@@ -17,7 +17,7 @@ class EditYogaPose extends Component {
   componentDidMount() {
     axios
       .get(
-        `http://localhost:3000/api/courses/${this.props.match.params.course_id}/poses/${this.props.match.params.id}}`
+        `/api/courses/${this.props.match.params.course_id}/poses/${this.props.match.params.id}}`
       )
       .then((response) => {
         console.log(response.data)
@@ -28,7 +28,7 @@ class EditYogaPose extends Component {
   onSubmitEdit = (form) => {
     axios
       .put(
-        `http://localhost:3000/api/courses/${this.props.match.params.course_id}/poses/${this.props.match.params.id}`,
+        `/api/courses/${this.props.match.params.course_id}/poses/${this.props.match.params.id}`,
         {
           pose: Object.assign(form.formData, { photo: this.state.signedId })
         }

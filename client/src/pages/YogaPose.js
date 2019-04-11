@@ -5,14 +5,16 @@ import axios from 'axios'
 class YogaPose extends Component {
   state = {
     isFlipped: false,
-    pose: []
+    pose: {}
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:3000/api/poses/${this.props.match.params.id}`).then((response) => {
-      console.log(response)
-      this.setState({ poses: response.data })
-    })
+    axios
+      .get(`/api/courses/${this.props.match.params.course_id}/poses/${this.props.match.params.id}`)
+      .then((response) => {
+        console.log(response)
+        this.setState({ pose: response.data })
+      })
   }
 
   render() {
