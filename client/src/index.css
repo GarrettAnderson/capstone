@@ -151,7 +151,7 @@ header h1 {
   /* border-right: 3px solid hsl(211, 41%, 50%) !important;
   border-left: 3px solid hsl(211, 41%, 50%) !important;
   border-top: 3px solid hsl(211, 41%, 50%) !important; */
-  background-color: hsl(180, 21%, 64%, 0.3) !important;
+  /* background-color: hsl(180, 21%, 64%, 0.3) !important; */
 }
 
 .homepage-header .logout-btn {
@@ -165,7 +165,7 @@ header h1 {
   /* border-right: 3px solid hsl(211, 41%, 50%) !important;
   border-left: 3px solid hsl(211, 41%, 50%) !important;
   border-top: 3px solid hsl(211, 41%, 50%) !important; */
-  background-color: hsl(180, 21%, 64%, 0.3) !important;
+  /* background-color: hsl(180, 21%, 64%, 0.3) !important; */
 }
 
 /* background-color: hsl(180, 21%, 64%, 0.3) */
@@ -475,6 +475,10 @@ section.courses-container main {
   bottom: 2rem;
   color: #fff;
   font-weight: 800;
+}
+
+.edit-course-container {
+  height: 100vh;
 }
 
 .edit-yoga-course {

@@ -8,7 +8,7 @@ import yogaStockImg from '../images/yoga_stock_img.jpg'
 
 class AddYogaPose extends Component {
   state = {
-    isFlipped: false,
+    isFlipped: true,
     course: {
       poses: []
     }

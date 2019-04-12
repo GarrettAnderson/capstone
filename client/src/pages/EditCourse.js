@@ -76,7 +76,7 @@ class EditCourse extends Component {
       }
     }
     return (
-      <section>
+      <section className="edit-course-container">
         <header className="header-nav">
           <Link to="/">
             <h1>Yogi Me</h1>
