@@ -24,7 +24,7 @@ class Home extends Component {
         <main className="home-page-container">
           <section>
             <ul className="list-group">
-              <Link to="/YogaHistory">
+              <Link to="/MyMat">
                 <li className="list-group-item">
                   <h3>History</h3>
                 </li>

@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { Router, Switch, Route } from 'react-router-dom'
 import axios from 'axios'
 import Home from './pages/Home'
-import YogaHistory from './pages/YogaHistory'
+import MyMat from './pages/MyMat'
 import YogaPose from './pages/YogaPose'
 import YogaPoses from './pages/YogaPoses'
 import YogaSequences from './pages/YogaSequences'
@@ -54,6 +54,7 @@ class App extends Component {
               }}
             />
             <Route exact path="/" component={Home} />
+            <Route exact path="/mymat" component={MyMat} />
             <Route exact path="/poses" component={YogaPoses} />
             <Route exact path="/courses" component={YogaSequences} />
             <Route exact path="/courses/new" component={CreateCourse} />
