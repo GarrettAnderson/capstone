@@ -11,12 +11,12 @@ class Home extends Component {
             <h1>Yogi Me</h1>
           </Link>
           {auth.isAuthenticated() && (
-            <Link to="/logout" className="btn btn-primary ml-1">
+            <Link to="/logout" className="btn btn-primary logout-btn">
               Log Out
             </Link>
           )}
           {!auth.isAuthenticated() && (
-            <Link to="/login" className="btn btn-primary ml-1">
+            <Link to="/login" className="btn btn-primary login-btn">
               Log In
             </Link>
           )}
