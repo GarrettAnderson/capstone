@@ -17,7 +17,7 @@ a {
 
 /* Yoga Poses Directory */
 .pose-gallery-img {
-  width: 30em;
+  width: 20em;
   border-radius: 5px;
   border: 1px solid hsl(21, 19%, 71%);
   margin-left: 1rem;
@@ -34,7 +34,7 @@ a {
 .pose-directory-row figcaption {
   position: relative;
   bottom: 2rem;
-  left: 1rem;
+  left: 2rem;
   color: hsl(150, 9%, 96%);
   font-family: 'Roboto', sans-serif;
 }
@@ -235,6 +235,7 @@ header h1 {
   background: url('images/buddha_background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
 }
 
 .pose-directory-container ol {
