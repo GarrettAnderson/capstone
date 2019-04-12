@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import yogaStockImg from '../images/yoga_stock_img.jpg'
 
 class YogaPose extends Component {
   state = {
@@ -32,24 +33,23 @@ class YogaPose extends Component {
             onClick={() => this.setState({ isFlipped: !this.state.isFlipped })}
           >
             <div className="card__face card__face--front">
-              <img src={require('../images/yoga_stock_img.jpg')} alt="tree-pose-image" />
+              <img src={this.state.pose.photo_url || yogaStockImg} alt="tree-pose-image" />
             </div>
             <div className="detail-card-outline card__face card__face--back">
               <ol className="pose-details-list list-group">
                 <li className="list-group-item">{this.state.pose.name}</li>
-                <li className="list-group-item">English Name</li>
-                <li className="list-group-item">Position Type</li>
-                <li className="list-group-item">
+                <li className="list-group-item">{this.state.pose.eng_name}</li>
+                <li className="list-group-item">{this.state.pose.category}</li>
+                {/* <li className="list-group-item">
                   <h6>Steps to Get into the Pose</h6>
-                </li>
-                <li className="list-group-item">Step 1</li>
+                </li> */}
+                {/* <li className="list-group-item">Step 1</li>
                 <li className="list-group-item">Step 2</li>
                 <li className="list-group-item">Step 3</li>
                 <li className="list-group-item">Step 4</li>
-                <li className="list-group-item">Step 5</li>
+                <li className="list-group-item">Step 5</li> */}
                 <li className="list-group-item">
-                  <b>Description:</b> Handstand half moon pose half boat pose eight angle pose child's pose frog pose
-                  bird of paradise pose crab pose staff pose flying crow pose.
+                  <b>Description:</b> {this.state.pose.desc}
                 </li>
               </ol>
             </div>

@@ -24,6 +24,15 @@ class AddYogaPose extends Component {
       })
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    // If the signed id is what is changing, don't refresh the form
+    if (this.state.signedId !== nextState.signedId) {
+      return false
+    }
+
+    return true
+  }
+
   render() {
     const formSchema = {
       title: 'Create a Pose',
@@ -37,34 +46,28 @@ class AddYogaPose extends Component {
         // },
         name: {
           type: 'string',
-          title: 'Sanskrit Name',
-          default: ''
+          title: 'Sanskrit Name'
         },
-        alt_name: {
+        eng_name: {
           type: 'string',
-          title: 'English Name',
-          default: ''
+          title: 'English Name'
         },
         position: {
           type: 'string',
-          title: 'Position Type',
-          default: ''
+          title: 'Position Type'
         },
         physical_benefits: {
           type: 'string',
-          title: 'Physical Benefits',
-          default: ''
+          title: 'Physical Benefits'
         },
         psych_benefits: {
           type: 'string',
-          title: 'Psychological Benefits',
-          default: ''
+          title: 'Psychological Benefits'
         },
         description: {
           type: 'string',
           format: 'textarea',
-          title: 'Description',
-          default: ''
+          title: 'Description'
         }
       }
     }

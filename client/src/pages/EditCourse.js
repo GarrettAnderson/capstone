@@ -76,7 +76,7 @@ class EditCourse extends Component {
       }
     }
     return (
-      <section className="edit-course-container">
+      <section className={this.state.poses.length == 0 ? 'edit-course-container' : ''}>
         <header className="header-nav">
           <Link to="/">
             <h1>Yogi Me</h1>
@@ -90,7 +90,7 @@ class EditCourse extends Component {
                 <li key={pose.id}>
                   <Link to={`/courses/${this.props.match.params.id}/poses/edit/${pose.id}`}>
                     <img
-                      src={this.state.poses.photo_url || yogaStockImg}
+                      src={pose.photo_url || yogaStockImg}
                       className="edit-pose-gallery-img"
                       alt="specific-yoga-pose-img"
                     />

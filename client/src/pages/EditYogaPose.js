@@ -42,33 +42,33 @@ class EditYogaPose extends Component {
         name: {
           type: 'string',
           title: 'Sanskrit Name',
-          default: `${this.state.pose.name}`
+          default: this.state.pose.name
         },
-        alt_name: {
+        eng_name: {
           type: 'string',
           title: 'English Name',
-          default: `${this.state.pose.category}`
+          default: this.state.pose.eng_name
         },
         position: {
           type: 'string',
           title: 'Position Type',
-          default: `${this.state.pose.category}`
+          default: this.state.pose.category
         },
         physical_benefits: {
           type: 'string',
           title: 'Physical Benefits',
-          default: `${this.state.pose.physical_benefits}`
+          default: this.state.pose.physical_benefits
         },
         psych_benefits: {
           type: 'string',
           title: 'Psychological Benefits',
-          default: `${this.state.pose.psych_benefits}`
+          default: this.state.pose.psych_benefits
         },
         description: {
           type: 'string',
           format: 'textarea',
           title: 'Description',
-          default: `${this.state.pose.description}`
+          default: this.state.pose.description
         }
       }
     }
