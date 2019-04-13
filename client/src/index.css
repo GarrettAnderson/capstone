@@ -461,7 +461,8 @@ section.courses-container main {
 }
 
 .course-poses img {
-  width: 10em;
+  width: 17rem;
+  height: 17rem;
   border-radius: 5px;
   margin-right: 1rem;
   counter: pointer;
@@ -498,7 +499,8 @@ section.courses-container main {
 }
 
 .edit-pose-gallery-img {
-  width: 15em;
+  width: 17rem;
+  height: 15rem;
   border-radius: 5px;
   margin-right: 2rem;
 }
@@ -587,3 +589,42 @@ section.courses-container main {
 .create-class-form #root__title {
   text-align: center;
 }
+
+/* My Mat section styles */
+
+.my-mat {
+  height: 100vh;
+}
+
+.my-mat main {
+  background: url('./images/Sunset.jpg');
+  height: 91%;
+  background-size: cover;
+}
+
+.my-mat main ol {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0px;
+  align-items: center;
+}
+
+.my-mat main ol article {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-mat main ol article img {
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 568px) and (max-width: 768px) {
+}
+
+/* 
+  @media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1200px) {
+
+  } */
