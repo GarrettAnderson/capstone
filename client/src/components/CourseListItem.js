@@ -17,29 +17,6 @@ class CourseListItem extends Component {
     })
   }
 
-  // showCoursePoses = (event) => {
-  //   this.setState({ isShown: !this.state.isShown })
-  // }
-
-  // showEditDeleteBtns = (course) => {
-  //   if (!course.owned) {
-  //     return <div />
-  //   } else {
-  //     return (
-  //       <span>
-  //         <Link to={`/courses/${this.props.id}`}>
-  //           <button className="edit-created-class-icon">
-  //             <i className="fas fa-pen fa-2x" />
-  //           </button>
-  //         </Link>
-  //         <button className="delete-created-class-icon">
-  //           <i className="fas fa-trash-alt fa-2x" onClick={this.deleteCourse} />
-  //         </button>
-  //       </span>
-  //     )
-  //   }
-  // }
-
   render() {
     return (
       <li className="list-group-item course-list-item">

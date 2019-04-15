@@ -272,7 +272,7 @@ header h1 {
 
 .single-pose-container div.scene {
   background: url('images/buddha_background.jpg');
-  height: 91%;
+  min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
 }

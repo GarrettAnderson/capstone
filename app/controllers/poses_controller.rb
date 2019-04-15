@@ -9,9 +9,15 @@ class PosesController < ApplicationController
   end
 
   def all
-    @poses = Pose.all
+    yoga_pose_name = params[:name]
 
+    if yoga_pose_name
+      @poses = Pose.where("name ilike ?", "%#{yoga_pose_name}%")
+    else 
+      @poses = Pose.all
+    end
     render :index
+    # render json: @poses
   end
 
   # GET /poses/1

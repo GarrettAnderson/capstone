@@ -5,13 +5,27 @@ import yogaStockImg from '../images/yoga_stock_img.jpg'
 
 class YogaPoses extends Component {
   state = {
-    poses: []
+    poses: [],
+    name: ''
   }
 
   componentDidMount() {
     axios.get('/api/poses').then((response) => {
       console.log(response)
       this.setState({ poses: response.data })
+    })
+  }
+
+  handleSearchChange = (event) => {
+    const yoga_pose_name = event.target.value
+    console.log(yoga_pose_name)
+    this.setState({ name: yoga_pose_name }, () => {
+      axios.get(`http://localhost:3001/api/poses?name=${this.state.name}`).then((response) => {
+        console.log(response)
+        this.setState({
+          poses: response.data
+        })
+      })
     })
   }
 
@@ -24,6 +38,10 @@ class YogaPoses extends Component {
           </Link>
         </header>
         <main className="pose-directory-container">
+          <label>
+            Search poses:
+            <input value={this.state.name} onChange={this.handleSearchChange} />
+          </label>
           <ol>
             {/* each list item represents a left-scroll-able yoga pose category */}
 
