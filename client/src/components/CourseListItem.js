@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import axios from 'axios'
+import auth from '../auth'
 import yogaStockImage from '../images/yoga_stock_img.jpg'
 
 class CourseListItem extends Component {
@@ -20,6 +21,25 @@ class CourseListItem extends Component {
   //   this.setState({ isShown: !this.state.isShown })
   // }
 
+  // showEditDeleteBtns = (course) => {
+  //   if (!course.owned) {
+  //     return <div />
+  //   } else {
+  //     return (
+  //       <span>
+  //         <Link to={`/courses/${this.props.id}`}>
+  //           <button className="edit-created-class-icon">
+  //             <i className="fas fa-pen fa-2x" />
+  //           </button>
+  //         </Link>
+  //         <button className="delete-created-class-icon">
+  //           <i className="fas fa-trash-alt fa-2x" onClick={this.deleteCourse} />
+  //         </button>
+  //       </span>
+  //     )
+  //   }
+  // }
+
   render() {
     return (
       <li className="list-group-item course-list-item">
@@ -29,15 +49,18 @@ class CourseListItem extends Component {
             <button className="view-created-class-icon" onClick={() => this.setState({ isShown: !this.state.isShown })}>
               {this.state.isShown ? <i className="fas fa-angle-down fa-2x" /> : <i className="fas fa-angle-up fa-2x" />}
             </button>
-
-            <Link to={`/courses/${this.props.id}`}>
-              <button className="edit-created-class-icon">
-                <i className="fas fa-pen fa-2x" />
+            {auth.isAuthenticated() && (
+              <Link to={`/courses/${this.props.id}`}>
+                <button className="edit-created-class-icon">
+                  <i className="fas fa-pen fa-2x" />
+                </button>
+              </Link>
+            )}
+            {auth.isAuthenticated() && (
+              <button className="delete-created-class-icon">
+                <i className="fas fa-trash-alt fa-2x" onClick={this.deleteCourse} />
               </button>
-            </Link>
-            <button className="delete-created-class-icon">
-              <i className="fas fa-trash-alt fa-2x" onClick={this.deleteCourse} />
-            </button>
+            )}
           </span>
         </section>
         {/* Below is the div for showing poses per class */}

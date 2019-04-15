@@ -95,10 +95,7 @@ class EditCourse extends Component {
                       alt="specific-yoga-pose-img"
                     />
                   </Link>
-                  <p>
-                    {pose.name}
-                    {pose.id}
-                  </p>
+                  <p>{pose.name}</p>
                   <button className="btn btn-danger delete-btn" onClick={() => this.deletePose(pose)}>
                     Delete Pose
                   </button>

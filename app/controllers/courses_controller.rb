@@ -41,7 +41,11 @@ class CoursesController < ApplicationController
   # DELETE /courses/1
   # DELETE /courses/1.json
   def destroy
-    @course.destroy
+    if @couse.user == current_user
+      @course.destroy
+    else
+      render json: { error: "This is not your class" }
+    end
   end
 
   private
