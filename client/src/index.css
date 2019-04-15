@@ -266,9 +266,9 @@ header h1 {
 } */
 
 /* Individual Yoga Pose */
-.single-pose-container {
+/* .single-pose-container {
   height: 100vh;
-}
+} */
 
 .single-pose-container div.scene {
   background: url('images/buddha_background.jpg');
