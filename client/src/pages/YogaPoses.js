@@ -38,14 +38,13 @@ class YogaPoses extends Component {
           </Link>
         </header>
         <main className="pose-directory-container">
-          <label>
-            Search poses:
-            <input value={this.state.name} onChange={this.handleSearchChange} />
-          </label>
+          <label>Search poses:</label>
+          <input value={this.state.name} onChange={this.handleSearchChange} />
           <ol>
             {/* each list item represents a left-scroll-able yoga pose category */}
 
             {/* <section className="pose-directory-row"> */}
+
             {this.state.poses.map((pose) => {
               return (
                 <Link to={`/courses/${pose.course_id}/poses/${pose.id}`} key={pose.id} className="pose-directory-row">
