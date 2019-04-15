@@ -18,8 +18,10 @@ import history from './history'
 
 class App extends Component {
   componentDidMount() {
-    axios.defaults.headers.common = {
-      Authorization: auth.authorizationHeader()
+    if (auth.isAuthenticated()) {
+      axios.defaults.headers.common = {
+        Authorization: auth.authorizationHeader()
+      }
     }
   }
 
