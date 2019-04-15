@@ -15,7 +15,7 @@ class CoursesController < ApplicationController
   # POST /courses
   # POST /courses.json
   def create
-    @course = Course.new(course_params)
+    @course = current_user.courses.new(course_params)
 
     if @course.save
       render :show, status: :created, location: @course
@@ -27,10 +27,14 @@ class CoursesController < ApplicationController
   # PATCH/PUT /courses/1
   # PATCH/PUT /courses/1.json
   def update
-    if @course.update(course_params)
-      render :show, status: :ok, location: @course
+    if @course.user == current_user
+      if @course.update(course_params)
+        render :show, status: :ok, location: @course
+      else
+        render json: @course.errors, status: :unprocessable_entity
+      end
     else
-      render json: @course.errors, status: :unprocessable_entity
+      render json: { error: "This is not your class" }
     end
   end
 
