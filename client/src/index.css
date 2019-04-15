@@ -593,9 +593,9 @@ section.courses-container main {
 
 /* My Mat section styles */
 
-.my-mat {
+/* .my-mat {
   height: 100vh;
-}
+} */
 
 .my-mat main {
   background: url('./images/Sunset.jpg');
@@ -605,27 +605,40 @@ section.courses-container main {
 
 .my-mat main ol,
 ul {
-  /* display: flex; */
-  /* flex-direction: column; */
   list-style: none;
   padding-left: 0px;
-  /* align-items: center; */
 }
 
-.my-mat main ol article {
+.my-mat main ol aside {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+
+.my-mat main ol aside header {
+  background-color: hsl(331, 28%, 60%, 0.6);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 80%;
+  color: #fff;
+  padding-top: 8px;
+  margin-top: 10px;
 }
 
 .my-mat main ol article img {
   border-radius: 50%;
+  width: 70%;
+  margin-top: 15px;
 }
 
 .my-mat main ol p {
   background-color: hsl(335, 98%, 37%, 0.4);
-  border-radius: 5px;
-  width: 75%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 80%;
+  color: #fff;
+  padding: 10px 10px;
 }
 
 .my-mat main ul {
@@ -633,6 +646,12 @@ ul {
   flex-direction: column;
   list-style: none;
   padding-left: 0px;
+  align-items: center;
+}
+
+.my-mat article section {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 

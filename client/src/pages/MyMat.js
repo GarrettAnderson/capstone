@@ -18,7 +18,7 @@ class MyMat extends Component {
                 <aside>
                   <img src={instructorImg} alt="instructor-image" />
                   <header>
-                    <h3>Course Name</h3>
+                    <h3>Instructor Name</h3>
                   </header>
                 </aside>
                 <section>
@@ -33,6 +33,26 @@ class MyMat extends Component {
                 </section>
               </article>
             </li>
+            {/* <li>
+              <article>
+                <aside>
+                  <img src={instructorImg} alt="instructor-image" />
+                  <header>
+                    <h3>Course Name</h3>
+                  </header>
+                </aside>
+                <section>
+                  <p>
+                    Handstand half moon pose half boat pose eight angle pose child's pose frog pose bird of paradise
+                    pose crab pose staff pose flying crow pose sage koundinya i pose one-legged king pigeon pose ii
+                    eagle pose cow face pose marichi's pose ii big toe pose gate pose full boat pose marichi's pose iii,
+                    seated twist side crane pose, side crow pose yoga plank pose shoulderstand, supported shoulderstand
+                    locust pose easy pose knees to chest pose upward facing dog pose chair pose warrior ii pose hero
+                    pose.
+                  </p>
+                </section>
+              </article>
+            </li> */}
           </ol>
         </main>
       </section>
