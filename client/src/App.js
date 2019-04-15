@@ -17,6 +17,12 @@ import auth from './auth'
 import history from './history'
 
 class App extends Component {
+  componentDidMount() {
+    axios.defaults.headers.common = {
+      Authorization: auth.authorizationHeader()
+    }
+  }
+
   render() {
     return (
       <div>
