@@ -449,7 +449,7 @@ section.courses-container main {
 
 .course-poses {
   display: flex;
-  width: 32rem;
+  /* width: 32rem; */
   overflow: auto;
 }
 

@@ -18,7 +18,7 @@ class MyMat extends Component {
                 <aside>
                   <img src={instructorImg} alt="instructor-image" />
                   <header>
-                    <h3>Instructor Name</h3>
+                    <h3>Garrett Lee Graham Anderson</h3>
                   </header>
                 </aside>
                 <section>
