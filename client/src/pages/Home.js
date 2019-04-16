@@ -26,7 +26,7 @@ class Home extends Component {
             <ul className="list-group">
               <Link to="/MyMat">
                 <li className="list-group-item">
-                  <h3>History</h3>
+                  <h3>My Mat</h3>
                 </li>
               </Link>
 
