@@ -590,12 +590,15 @@ section.courses-container main {
 /* My Mat section styles */
 
 /* .my-mat {
-  height: 100vh;
+  min-height: 100vh;
 } */
 
 .my-mat main {
-  background: url('./images/Sunset.jpg');
-  height: 91%;
+  /* background: url('./images/Sunset.jpg');
+   */
+  background: url('./images/sunset-bkgrnd.jpg');
+  /* height: 91%; */
+  min-height: 100vh;
   background-size: cover;
 }
 
@@ -624,7 +627,7 @@ ul {
 
 .my-mat main ol article img {
   border-radius: 50%;
-  width: 55%;
+  width: 40%;
   margin-top: 15px;
 }
 
