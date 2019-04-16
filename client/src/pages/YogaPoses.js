@@ -38,8 +38,8 @@ class YogaPoses extends Component {
           </Link>
         </header>
         <main className="pose-directory-container">
-          <label>Search poses:</label>
-          <input value={this.state.name} onChange={this.handleSearchChange} />
+          {/* <label>Search poses:</label>
+          <input value={this.state.name} onChange={this.handleSearchChange} /> */}
           <ol>
             {/* each list item represents a left-scroll-able yoga pose category */}
 
@@ -55,7 +55,7 @@ class YogaPoses extends Component {
                         className="pose-gallery-img"
                         alt="specific-yoga-pose-img"
                       />
-                      <figcaption>Yoga Pose Name</figcaption>
+                      <figcaption>{pose.name}</figcaption>
                     </figure>
                   </li>
                 </Link>

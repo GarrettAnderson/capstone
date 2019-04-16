@@ -36,7 +36,7 @@ a {
   position: relative;
   bottom: 2rem;
   left: 2rem;
-  color: hsl(150, 9%, 96%);
+  color: hsl(335, 98%, 37%);
   font-family: 'Roboto', sans-serif;
 }
 
@@ -73,6 +73,7 @@ a {
 
 .yoga-pose-index h2 {
   margin-left: 0.75em;
+  font-family: 'Roboto', sans-serif;
 }
 
 .yoga-sequence {
@@ -94,16 +95,6 @@ a {
 .header-nav a {
   text-decoration: none;
 }
-
-/* .directory-header-nav {
-  background: url('images/header_background.jpg');
-  height: 9%;
-  background-size: cover;
-}
-
-.directory-header-nav a {
-  text-decoration: none;
-} */
 
 header h1 {
   font-size: 3em;
@@ -556,6 +547,11 @@ header h1 {
   background-color: hsl(335, 98%, 37%);
   margin-bottom: 1rem;
   margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.add-new-pose fieldset {
+  padding: 0rem 2rem;
 }
 
 .add-new-pose button:hover {
@@ -581,6 +577,9 @@ header h1 {
   margin-left: 2rem;
 }
 
+.upload-image:hover {
+  cursor: pointer;
+}
 /* Create Course form */
 
 .create-class-form {
@@ -671,7 +670,7 @@ ul {
 
 /* Break Point for larger mobile/ tablet devices */
 
-@media only screen and (min-width: 568px) and (max-width: 768px) {
+@media only screen and (min-width: 568px) {
   .my-mat main article {
     display: flex;
     flex-direction: row !important;
@@ -711,7 +710,9 @@ ul {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
+/* @media only screen and (min-width: 568px) and (max-width: 768px) { */
+
+/* @media only screen and (min-width: 768px) and (max-width: 1200px) {
   .my-mat main article {
     display: flex;
     flex-direction: row !important;
@@ -736,9 +737,9 @@ ul {
 
   .my-mat main ol p {
     border-radius: 5px;
-  }
+  } */
 
-  /* .my-mat main ol p:before {
+/* .my-mat main ol p:before {
     content: '\f0d9';
   } */
-}
+/* } */
