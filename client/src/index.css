@@ -88,19 +88,19 @@ a {
 
 .header-nav {
   background: url('images/header_background.jpg');
-  /* height: 15%; */
   height: 9%;
   background-size: cover;
+  font-family: 'Roboto', sans-serif;
 }
 
 .header-nav a {
   text-decoration: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 header h1 {
-  font-size: 3em;
+  /* font-size: 3em; */
   font-family: 'Oleo Script', cursive;
-  /* font-family: 'Julius Sans One', sans-serif; */
   margin-top: 0;
   color: #fff;
   padding-top: 0.2em;
@@ -498,6 +498,15 @@ header h1 {
   height: 17rem;
   border-radius: 5px;
   margin-right: 2rem;
+}
+
+.edit-yoga-course ol p {
+  position: relative;
+  bottom: 2rem;
+  left: 1rem;
+  color: hsl(335, 98%, 37%);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
 }
 
 .edit-course-form legend {
