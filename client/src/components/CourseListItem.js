@@ -45,7 +45,7 @@ class CourseListItem extends Component {
           {this.props.poses.map((pose) => {
             return (
               <figure key={pose.id}>
-                <img src={pose.photo_url} className="pose-gallery-img" alt="specific-yoga-pose-img" />
+                <img src={pose.photo_url || yogaStockImage} className="pose-gallery-img" alt="specific-yoga-pose-img" />
                 <figcaption>{pose.name}</figcaption>
               </figure>
             )
