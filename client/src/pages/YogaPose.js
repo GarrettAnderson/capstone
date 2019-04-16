@@ -42,9 +42,7 @@ class YogaPose extends Component {
                 <li className="list-group-item">{this.state.pose.category}</li>
                 <li className="list-group-item">{this.state.pose.physical_benefits}</li>
                 <li className="list-group-item">{this.state.pose.psych_benefits}</li>
-                <li className="list-group-item">
-                  <b>Description:</b> {this.state.pose.description}
-                </li>
+                <li className="list-group-item">{this.state.pose.description}</li>
               </ol>
             </div>
           </div>

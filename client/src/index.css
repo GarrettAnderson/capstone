@@ -266,8 +266,8 @@ header h1 {
 
 .detail-card-outline {
   background-color: hsl(21, 19%, 71%, 0.5);
-  width: 20rem;
-  height: 30rem;
+  width: 25rem;
+  height: 25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -343,8 +343,8 @@ header h1 {
 }
 
 .card {
-  width: 20rem;
-  height: 30rem;
+  width: 25rem;
+  height: 25rem;
   transition: transform 1s linear;
   transform-style: preserve-3d;
   transform-origin: center right;
@@ -364,8 +364,8 @@ header h1 {
 }
 
 .card img {
-  width: 20rem;
-  height: 30rem;
+  width: 25rem;
+  height: 25rem;
   border-radius: 5px;
 }
 
@@ -731,8 +731,8 @@ ul {
     cursor: pointer;
   }
   .card {
-    width: 25rem;
-    height: 30rem;
+    width: 35rem;
+    height: 32rem;
     transition: transform 1s linear;
     transform-style: preserve-3d;
     transform-origin: center right;
@@ -741,13 +741,13 @@ ul {
     background-color: transparent;
   }
   .card img {
-    width: 25rem;
-    height: 30rem;
+    width: 35rem;
+    height: 32rem;
     border-radius: 5px;
   }
   .detail-card-outline {
-    width: 25rem;
-    height: 30rem;
+    width: 35rem;
+    height: 32rem;
   }
 }
 
