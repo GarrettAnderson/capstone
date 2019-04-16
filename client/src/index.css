@@ -350,6 +350,7 @@ header h1 {
   transform-origin: center right;
   cursor: pointer;
   position: relative;
+  background-color: transparent;
 }
 
 .card__face {
@@ -700,11 +701,6 @@ ul {
     border-radius: 5px;
   }
 
-  .detail-card-outline {
-    width: 20rem;
-    height: 30rem;
-  }
-
   .course-list-item section {
     display: flex;
     flex-direction: row !important;
@@ -733,6 +729,25 @@ ul {
     padding-left: 0;
     text-decoration: none;
     cursor: pointer;
+  }
+  .card {
+    width: 25rem;
+    height: 30rem;
+    transition: transform 1s linear;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+  }
+  .card img {
+    width: 25rem;
+    height: 30rem;
+    border-radius: 5px;
+  }
+  .detail-card-outline {
+    width: 25rem;
+    height: 30rem;
   }
 }
 
@@ -802,12 +817,32 @@ ul {
   .home-page-container ul {
     display: flex;
     -webkit-flex-direction: column;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     padding-left: 0;
     align-items: unset;
   }
 
-  .home-page-container ul a:first-child {
+  .card {
+    width: 40rem;
+    height: 35rem;
+    transition: transform 1s linear;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+  }
+  .card img {
+    width: 40rem;
+    height: 35rem;
+    border-radius: 5px;
+  }
+  .detail-card-outline {
+    width: 40rem;
+    height: 35rem;
+  }
+  /* .home-page-container ul a:first-child {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -824,7 +859,7 @@ ul {
     align-items: center;
     justify-content: flex-end;
     margin-right: 1rem;
-  }
+  } */
 
   .home-page-container .list-group-item {
     background-color: hsl(180, 21%, 64%, 0.3) !important;
