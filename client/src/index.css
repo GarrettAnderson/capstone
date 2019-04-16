@@ -282,8 +282,8 @@ header h1 {
 
 .detail-card-outline {
   background-color: hsl(21, 19%, 71%, 0.5);
-  width: 30rem;
-  height: 40rem;
+  width: 20rem;
+  height: 30rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -299,7 +299,7 @@ header h1 {
   width: 90%;
   height: 90%;
   border: 3px solid hsl(21, 19%, 71%);
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 5px;
 }
 
@@ -359,8 +359,8 @@ header h1 {
 }
 
 .card {
-  width: 30rem;
-  height: 40rem;
+  width: 20rem;
+  height: 30rem;
   transition: transform 1s linear;
   transform-style: preserve-3d;
   transform-origin: center right;
@@ -379,8 +379,8 @@ header h1 {
 }
 
 .card img {
-  width: 30rem;
-  height: 40rem;
+  width: 20rem;
+  height: 30rem;
   border-radius: 5px;
 }
 
@@ -425,6 +425,11 @@ header h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+}
+
+.course-list-item span.class-button-wrapper {
+  margin: 1rem 0rem;
 }
 
 .course-list-item button {
@@ -561,10 +566,19 @@ header h1 {
   background-color: hsl(335, 98%, 37%);
   margin-bottom: 1rem;
   margin-top: 1rem;
+  margin-left: 2rem;
 }
 
 .edit-pose-form button:hover {
   background-color: hsl(331, 28%, 60%);
+}
+
+.edit-pose-form fieldset {
+  padding: 0rem 2rem;
+}
+
+.upload-image {
+  margin-left: 2rem;
 }
 
 /* Create Course form */
@@ -655,6 +669,8 @@ ul {
   align-items: center;
 }
 
+/* Break Point for larger mobile/ tablet devices */
+
 @media only screen and (min-width: 568px) and (max-width: 768px) {
   .my-mat main article {
     display: flex;
@@ -682,13 +698,17 @@ ul {
     border-radius: 5px;
   }
 
-  /* .my-mat main ol p:before {
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-right: 10px solid blue;
-  } */
+  .detail-card-outline {
+    width: 20rem;
+    height: 30rem;
+  }
+
+  .course-list-item section {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {

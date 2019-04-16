@@ -2,7 +2,12 @@ import React from 'react'
 
 const defaultRender = ({ handleUpload, uploads, ready }) => (
   <div>
-    <input type="file" disabled={!ready} onChange={(event) => handleUpload(event.currentTarget.files)} />
+    <input
+      className="upload-image"
+      type="file"
+      disabled={!ready}
+      onChange={(event) => handleUpload(event.currentTarget.files)}
+    />
 
     {uploads.map((upload) => {
       switch (upload.state) {

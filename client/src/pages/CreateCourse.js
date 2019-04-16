@@ -29,11 +29,6 @@ class CreateCourse extends Component {
       type: 'object',
       required: [ 'name' ],
       properties: {
-        // user_id: {
-        //   type: 'string',
-        //   title: 'User Id',
-        //   default: 1
-        // },
         name: {
           type: 'string',
           title: 'Name',

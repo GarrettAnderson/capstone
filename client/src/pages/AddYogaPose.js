@@ -39,11 +39,6 @@ class AddYogaPose extends Component {
       type: 'object',
       required: [ 'name' ],
       properties: {
-        // course_id: {
-        //   type: 'string',
-        //   title: 'Course Id',
-        //   default: `${this.props.match.params.course_id}`
-        // },
         name: {
           type: 'string',
           title: 'Sanskrit Name'
@@ -52,7 +47,7 @@ class AddYogaPose extends Component {
           type: 'string',
           title: 'English Name'
         },
-        position: {
+        category: {
           type: 'string',
           title: 'Position Type'
         },

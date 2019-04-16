@@ -41,15 +41,15 @@ class PosesController < ApplicationController
   # PATCH/PUT /poses/1
   # PATCH/PUT /poses/1.json
   def update
-    # if @pose.user == current_user
+    if @pose.user == current_user
       if @pose.update(pose_params)
         render :show, status: :ok
       else
         render json: @pose.errors, status: :unprocessable_entity
       end
-    # else
-    #   render json: { error: "This is not your class" }
-    # end
+    else
+      render json: { error: "This is not your class" }
+    end
   end
 
   # DELETE /poses/1

@@ -49,7 +49,7 @@ class EditYogaPose extends Component {
           title: 'English Name',
           default: this.state.pose.eng_name
         },
-        position: {
+        category: {
           type: 'string',
           title: 'Position Type',
           default: this.state.pose.category
@@ -91,10 +91,11 @@ class EditYogaPose extends Component {
             <div className="detail-card-outline card__face card__face--back">
               <Form schema={formSchema} onSubmit={this.onSubmitEdit} className="edit-pose-form">
                 <DirectUploadProvider
+                  className="upload-image"
                   onSuccess={(signedIds) => this.setState({ signedId: signedIds[0] })}
                   render={DefaultDirectUploadRender}
                 />
-                <button className="btn btn-info" type="submit">
+                <button className="btn btn-info edit-pose-submit" type="submit">
                   Submit
                 </button>
               </Form>

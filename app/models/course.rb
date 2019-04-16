@@ -1,4 +1,4 @@
 class Course < ApplicationRecord
   belongs_to :user, optional: true
-  has_many :poses
+  has_many :poses, dependent: :destroy
 end
