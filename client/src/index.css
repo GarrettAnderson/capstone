@@ -38,6 +38,7 @@ a {
   left: 2rem;
   color: hsl(335, 98%, 37%);
   font-family: 'Roboto', sans-serif;
+  font-weight: 800;
 }
 
 .create-yoga-container {
@@ -467,7 +468,7 @@ header h1 {
   margin-left: 2rem;
   position: relative;
   bottom: 2rem;
-  color: #fff;
+  color: hsl(335, 98%, 37%);
   font-weight: 800;
 }
 

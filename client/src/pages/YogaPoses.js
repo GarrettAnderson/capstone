@@ -62,6 +62,28 @@ class YogaPoses extends Component {
               )
             })}
           </ol>
+          <ol>
+            {/* each list item represents a left-scroll-able yoga pose category */}
+
+            {/* <section className="pose-directory-row"> */}
+
+            {this.state.poses.map((pose) => {
+              return (
+                <Link to={`/courses/${pose.course_id}/poses/${pose.id}`} key={pose.id} className="pose-directory-row">
+                  <li>
+                    <figure>
+                      <img
+                        src={pose.photo_url || yogaStockImg}
+                        className="pose-gallery-img"
+                        alt="specific-yoga-pose-img"
+                      />
+                      <figcaption>{pose.name}</figcaption>
+                    </figure>
+                  </li>
+                </Link>
+              )
+            })}
+          </ol>
         </main>
       </section>
     )
