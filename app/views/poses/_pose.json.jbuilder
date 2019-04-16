@@ -1,4 +1,4 @@
-json.extract! pose, :id, :name, :category, :description, :physical_benefits, :psych_benefits, :course_id, :created_at, :updated_at
+json.extract! pose, :id, :name, :eng_name, :category, :description, :physical_benefits, :psych_benefits, :course_id, :created_at, :updated_at
 
 if pose.photo.attached?
   json.photo_url url_for(pose.photo)
