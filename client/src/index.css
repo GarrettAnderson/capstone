@@ -738,7 +738,7 @@ ul {
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 769px) {
   .homepage-header {
     background: url('./images/crop_texture_background.jpg');
     background-repeat: no-repeat;
@@ -787,6 +787,14 @@ ul {
     border-radius: 5px;
   }
 
+  .home-page-container ul {
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    align-items: unset;
+  }
+
   .home-page-container ul a:first-child {
     display: flex;
     align-items: center;
@@ -802,11 +810,5 @@ ul {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-  }
-  .home-page-container ul {
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    padding-left: 0;
   }
 }
