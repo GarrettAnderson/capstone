@@ -402,6 +402,11 @@ header h1 {
   color: #fff;
 }
 
+.create-class-btn:active {
+  background-color: transparent;
+  border-color: none;
+}
+
 .course-list-item {
   background-color: hsl(335, 98%, 37%, 0.4);
 }
@@ -453,7 +458,6 @@ header h1 {
   height: 17rem;
   border-radius: 5px;
   margin-right: 1rem;
-  cursor: pointer;
   margin-top: 1rem;
 }
 
@@ -599,6 +603,10 @@ header h1 {
 .create-class-form button:hover {
   background-color: hsl(331, 28%, 60%);
 }
+.create-class-form button:active {
+  background-color: transparent !important;
+  border-color: none !important;
+}
 
 .create-class-form #root__title {
   text-align: center;
@@ -732,7 +740,7 @@ ul {
   }
   .card {
     width: 35rem;
-    height: 32rem;
+    height: 35rem;
     transition: transform 1s linear;
     transform-style: preserve-3d;
     transform-origin: center right;
@@ -742,12 +750,12 @@ ul {
   }
   .card img {
     width: 35rem;
-    height: 32rem;
+    height: 35rem;
     border-radius: 5px;
   }
   .detail-card-outline {
     width: 35rem;
-    height: 32rem;
+    height: 35rem;
   }
   .courses-container main {
     padding: 2rem 5rem;
@@ -828,7 +836,7 @@ ul {
 
   .card {
     width: 40rem;
-    height: 35rem;
+    height: 40rem;
     transition: transform 1s linear;
     transform-style: preserve-3d;
     transform-origin: center right;
@@ -838,12 +846,12 @@ ul {
   }
   .card img {
     width: 40rem;
-    height: 35rem;
+    height: 40rem;
     border-radius: 5px;
   }
   .detail-card-outline {
     width: 40rem;
-    height: 35rem;
+    height: 40rem;
   }
   .course-list-item section {
     display: flex;
