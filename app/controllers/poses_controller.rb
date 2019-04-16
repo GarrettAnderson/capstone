@@ -55,11 +55,11 @@ class PosesController < ApplicationController
   # DELETE /poses/1
   # DELETE /poses/1.json
   def destroy
-    # if @pose.user == current_user
+    if @pose.user == current_user
       @pose.destroy
-    # else
-    #   render json: { error: "This is not your class" }
-    # end
+    else
+      render json: { error: "This is not your class" }
+    end
   end
 
   private

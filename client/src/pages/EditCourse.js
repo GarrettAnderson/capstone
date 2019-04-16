@@ -35,7 +35,11 @@ class EditCourse extends Component {
         course: form.formData
       })
       .then((response) => {
-        this.props.history.push('/courses')
+        if (response.data.error) {
+          alert(response.data.error)
+        } else {
+          this.props.history.push('/courses')
+        }
       })
   }
 
