@@ -23,7 +23,7 @@ class YogaSequences extends Component {
 
   render() {
     return (
-      <section className="courses-container">
+      <section className={this.state.courses.length >= 0 ? 'courses-container' : ''}>
         <header className="header-nav">
           <Link to="/">
             <h1>Yogi Me</h1>
