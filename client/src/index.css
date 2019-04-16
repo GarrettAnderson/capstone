@@ -99,7 +99,6 @@ a {
 }
 
 header h1 {
-  /* font-size: 3em; */
   font-family: 'Oleo Script', cursive;
   margin-top: 0;
   color: #fff;
@@ -117,7 +116,7 @@ header h1 {
 .homepage-header {
   background: url('./images/crop_texture_background.jpg');
   background-repeat: no-repeat;
-  /* background-position-y: -30rem; */
+  background-position-y: -2rem;
   background-size: cover;
   height: 15%;
   min-height: 7rem;
@@ -140,11 +139,6 @@ header h1 {
   border: none !important;
   font-size: 1.3rem;
   cursor: pointer;
-  cursor: pointer;
-  /* border-right: 3px solid hsl(211, 41%, 50%) !important;
-  border-left: 3px solid hsl(211, 41%, 50%) !important;
-  border-top: 3px solid hsl(211, 41%, 50%) !important; */
-  /* background-color: hsl(180, 21%, 64%, 0.3) !important; */
 }
 
 .homepage-header .logout-btn {
@@ -681,7 +675,7 @@ ul {
 
 /* Break Point for larger mobile/ tablet devices */
 
-@media only screen and (min-width: 568px) {
+@media only screen and (min-width: 568px) and (max-width: 768px) {
   .my-mat main article {
     display: flex;
     flex-direction: row !important;
@@ -719,11 +713,54 @@ ul {
     justify-content: space-between;
     align-items: center;
   }
+
+  .homepage-header {
+    background: url('./images/crop_texture_background.jpg');
+    background-repeat: no-repeat;
+    background-position-y: -7rem;
+    background-size: cover;
+    height: 15%;
+    min-height: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5rem 0.5rem 0rem 0.5rem;
+  }
+  .homepage-header h1 {
+    font-family: 'Oleo Script', cursive;
+    margin-top: 0;
+    color: #fff;
+    padding-top: 0;
+    padding-left: 0;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
-/* @media only screen and (min-width: 568px) and (max-width: 768px) { */
-
-/* @media only screen and (min-width: 768px) and (max-width: 1200px) {
+@media only screen and (min-width: 768px) {
+  .homepage-header {
+    background: url('./images/crop_texture_background.jpg');
+    background-repeat: no-repeat;
+    background-position-y: -7rem;
+    background-size: cover;
+    height: 15%;
+    min-height: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5rem 0.5rem 0rem 0.5rem;
+  }
+  .homepage-header h1 {
+    font-family: 'Oleo Script', cursive;
+    margin-top: 0;
+    color: #fff;
+    padding-top: 0;
+    padding-left: 0;
+    text-decoration: none;
+    cursor: pointer;
+  }
   .my-mat main article {
     display: flex;
     flex-direction: row !important;
@@ -748,9 +785,28 @@ ul {
 
   .my-mat main ol p {
     border-radius: 5px;
-  } */
+  }
 
-/* .my-mat main ol p:before {
-    content: '\f0d9';
-  } */
-/* } */
+  .home-page-container ul a:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .home-page-container ul a:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home-page-container ul a:nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .home-page-container ul {
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+  }
+}
