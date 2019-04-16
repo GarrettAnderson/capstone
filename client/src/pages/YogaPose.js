@@ -42,14 +42,6 @@ class YogaPose extends Component {
                 <li className="list-group-item">{this.state.pose.category}</li>
                 <li className="list-group-item">{this.state.pose.physical_benefits}</li>
                 <li className="list-group-item">{this.state.pose.psych_benefits}</li>
-                {/* <li className="list-group-item">
-                  <h6>Steps to Get into the Pose</h6>
-                </li> */}
-                {/* <li className="list-group-item">Step 1</li>
-                <li className="list-group-item">Step 2</li>
-                <li className="list-group-item">Step 3</li>
-                <li className="list-group-item">Step 4</li>
-                <li className="list-group-item">Step 5</li> */}
                 <li className="list-group-item">
                   <b>Description:</b> {this.state.pose.description}
                 </li>
