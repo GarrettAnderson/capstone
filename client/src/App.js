@@ -62,7 +62,7 @@ class App extends Component {
               }}
             />
             <Route exact path="/" component={Home} />
-            <Route exact path="/mymat" component={MyMat} />
+            <Route exact path="/about" component={MyMat} />
             <Route exact path="/poses" component={YogaPoses} />
             <Route exact path="/courses" component={YogaSequences} />
             <Route exact path="/courses/new" component={CreateCourse} />
