@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import CourseListItem from '../components/CourseListItem'
 import auth from '../auth'
@@ -48,6 +48,7 @@ class YogaSequences extends Component {
                   load={this.loadCourses}
                   purpose={course.purpose}
                   desc={course.description}
+                  owned={course.owned}
                 />
               )
             })}

@@ -33,7 +33,7 @@ class YogaPose extends Component {
             onClick={() => this.setState({ isFlipped: !this.state.isFlipped })}
           >
             <div className="card__face card__face--front">
-              <img src={this.state.pose.photo_url || yogaStockImg} alt="tree-pose-image" />
+              <img src={this.state.pose.photo_url || yogaStockImg} alt="tree-pose" />
             </div>
             <div className="detail-card-outline card__face card__face--back">
               <ol className="pose-details-list list-group">

@@ -266,8 +266,8 @@ header h1 {
 
 .detail-card-outline {
   background-color: hsl(21, 19%, 71%, 0.5);
-  width: 25rem;
-  height: 25rem;
+  width: 22rem;
+  height: 30rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -343,8 +343,8 @@ header h1 {
 }
 
 .card {
-  width: 25rem;
-  height: 25rem;
+  width: 22rem;
+  height: 30rem;
   transition: transform 1s linear;
   transform-style: preserve-3d;
   transform-origin: center right;
@@ -364,8 +364,8 @@ header h1 {
 }
 
 .card img {
-  width: 25rem;
-  height: 25rem;
+  width: 22rem;
+  height: 30rem;
   border-radius: 5px;
 }
 
@@ -403,8 +403,8 @@ header h1 {
 }
 
 .create-class-btn:active {
-  background-color: transparent;
-  border-color: none;
+  background-color: transparent !important;
+  border-color: transparent !important;
 }
 
 .course-list-item {
@@ -518,20 +518,28 @@ header h1 {
 
 .edit-course-form button {
   margin-left: 2rem;
-}
-
-.edit-yoga-course .add-btn {
-  margin-left: 2rem;
-  margin-bottom: 2rem;
-}
-
-.edit-course-form button {
-  margin-left: 2rem;
+  border-color: transparent;
   background-color: hsl(335, 98%, 37%);
 }
 
 .edit-course-form button:hover {
   background-color: hsl(331, 28%, 60%);
+}
+
+.edit-course-form button:active {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.edit-course-form button:focus {
+  border-color: transparent !important;
+}
+
+.edit-yoga-course .add-btn {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  background-color: hsl(335, 98%, 37%);
+  border-color: transparent !important;
 }
 
 .edit-yoga-course .delete-btn {
@@ -542,12 +550,13 @@ header h1 {
   background-color: hsl(335, 98%, 37%);
 }
 
-.edit-yoga-course .add-btn {
-  background-color: hsl(335, 98%, 37%);
-}
-
 .edit-yoga-course .add-btn:hover {
   background-color: hsl(331, 28%, 60%);
+}
+
+.edit-yoga-course .add-btn:active {
+  background-color: transparent !important;
+  border-color: transparent !important;
 }
 
 .add-new-pose button {
@@ -567,6 +576,7 @@ header h1 {
 
 .edit-pose-form button {
   background-color: hsl(335, 98%, 37%);
+  border-color: transparent !important;
   margin-bottom: 1rem;
   margin-top: 1rem;
   margin-left: 2rem;
@@ -574,6 +584,11 @@ header h1 {
 
 .edit-pose-form button:hover {
   background-color: hsl(331, 28%, 60%);
+}
+
+.edit-pose-form button:active {
+  border-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .edit-pose-form fieldset {
@@ -598,6 +613,7 @@ header h1 {
 
 .create-class-form button {
   background-color: hsl(335, 98%, 37%);
+  border-color: transparent !important;
 }
 
 .create-class-form button:hover {

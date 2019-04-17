@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import auth from '../auth'
 import yogaStockImage from '../images/yoga_stock_img.jpg'
@@ -26,14 +26,16 @@ class CourseListItem extends Component {
             <button className="view-created-class-icon" onClick={() => this.setState({ isShown: !this.state.isShown })}>
               {this.state.isShown ? <i className="fas fa-angle-down fa-2x" /> : <i className="fas fa-angle-up fa-2x" />}
             </button>
-            {auth.isAuthenticated() && (
+            {auth.isAuthenticated() &&
+            this.props.owned && (
               <Link to={`/courses/${this.props.id}`}>
                 <button className="edit-created-class-icon">
                   <i className="fas fa-pen fa-2x" />
                 </button>
               </Link>
             )}
-            {auth.isAuthenticated() && (
+            {auth.isAuthenticated() &&
+            this.props.owned && (
               <button className="delete-created-class-icon">
                 <i className="fas fa-trash-alt fa-2x" onClick={this.deleteCourse} />
               </button>

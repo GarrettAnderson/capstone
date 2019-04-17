@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Form from 'react-jsonschema-form'
 import axios from 'axios'
 import { DirectUploadProvider } from 'react-activestorage-provider'
@@ -79,7 +79,7 @@ class AddYogaPose extends Component {
             <div className="card__face card__face--front">
               <img
                 src={yogaStockImg === '' ? this.state.image_Url : yogaStockImg}
-                alt="tree-pose-image"
+                alt="tree-pose"
                 onClick={() => this.setState({ isFlipped: !this.state.isFlipped })}
               />
             </div>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 import Form from 'react-jsonschema-form'
 import { DirectUploadProvider } from 'react-activestorage-provider'
@@ -24,9 +24,16 @@ class EditYogaPose extends Component {
   }
 
   onSubmitEdit = (form) => {
+    let poseData = form.formData
+
+    // Attach the photo if there is one
+    if (this.state.signedId) {
+      poseData.photo = this.state.signedId
+    }
+
     axios
       .put(`/api/courses/${this.props.match.params.course_id}/poses/${this.props.match.params.id}`, {
-        pose: Object.assign(form.formData, { photo: this.state.signedId })
+        pose: poseData
       })
       .then((response) => {
         this.props.history.push(`/courses/${this.props.match.params.course_id}`)
@@ -84,7 +91,7 @@ class EditYogaPose extends Component {
             <div className="card__face card__face--front">
               <img
                 src={this.state.pose.photo_url || yogaStockImage}
-                alt="tree-pose-image"
+                alt="tree-pose"
                 onClick={() => this.setState({ isFlipped: !this.state.isFlipped })}
               />
             </div>

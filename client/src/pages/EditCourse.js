@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Form from 'react-jsonschema-form'
 import axios from 'axios'
 import yogaStockImg from '../images/yoga_stock_img.jpg'
@@ -80,7 +80,7 @@ class EditCourse extends Component {
       }
     }
     return (
-      <section className={this.state.poses.length == 0 ? 'edit-course-container' : ''}>
+      <section className={this.state.poses.length === 0 ? 'edit-course-container' : ''}>
         <header className="header-nav">
           <Link to="/">
             <h1>Yogi Me</h1>

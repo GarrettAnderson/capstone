@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import instructorImg from '../images/profile_pic.jpg'
 
 class MyMat extends Component {
@@ -16,7 +16,7 @@ class MyMat extends Component {
             <li>
               <article>
                 <aside>
-                  <img src={instructorImg} alt="instructor-image" />
+                  <img src={instructorImg} alt="instructor" />
                   <header>
                     <h3>Garrett Lee Graham Anderson</h3>
                   </header>

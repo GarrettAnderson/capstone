@@ -11,13 +11,13 @@ import EditCourse from './pages/EditCourse'
 import EditYogaPose from './pages/EditYogaPose'
 import AddYogaPose from './pages/AddYogaPose'
 import CreateCourse from './pages/CreateCourse'
-import YogaSequenceBuilder from './pages/YogaSequenceBuilder'
-import YogaPoseImg from './pages/YogaPoseImg'
 import auth from './auth'
 import history from './history'
 
 class App extends Component {
-  componentDidMount() {
+  constructor(props) {
+    super(props)
+
     if (auth.isAuthenticated()) {
       axios.defaults.headers.common = {
         Authorization: auth.authorizationHeader()

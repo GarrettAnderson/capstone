@@ -27,6 +27,8 @@ const defaultRender = ({ handleUpload, uploads, ready }) => (
           )
         case 'finished':
           return <p key={upload.id}>Finished uploading {upload.file.name}</p>
+        default:
+          return <p />
       }
     })}
   </div>
