@@ -478,7 +478,7 @@ header h1 {
   padding-top: 2rem;
   padding-bottom: 2rem;
   background: url('images/buddha_background.jpg');
-  height: 91%;
+  min-height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -788,6 +788,7 @@ ul {
     text-decoration: none;
     background-size: cover;
     background-position-x: 50%;
+    background-position-y: 50%;
   }
 
   .homepage-header {
@@ -895,7 +896,7 @@ ul {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+/* @media only screen and (min-width: 1200px) {
   .home-page-container {
     background: url(/static/media/lotus_background.edd96bad.jpg);
     width: 100%;
@@ -905,4 +906,4 @@ ul {
     background-size: cover;
     background-position-y: 50%;
   }
-}
+} */
