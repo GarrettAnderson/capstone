@@ -162,6 +162,7 @@ header h1 {
 .home-page-container {
   background: url('images/lotus_background.jpg');
   width: 100%;
+  min-height: 100%;
   background-repeat: no-repeat;
   text-decoration: none;
   background-size: cover;
@@ -891,5 +892,17 @@ ul {
   }
   .courses-container main {
     padding: 2rem 5rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .home-page-container {
+    background: url(/static/media/lotus_background.edd96bad.jpg);
+    width: 100%;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    background-size: cover;
+    background-position-y: 50%;
   }
 }
